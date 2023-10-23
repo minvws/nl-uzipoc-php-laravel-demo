@@ -30,6 +30,6 @@ class OidcLoginResponseHandler implements LoginResponseHandlerInterface
         }
 
         Auth::setUser($user);
-        return new RedirectResponse(route('yivi-disclosure'));
+        return new RedirectResponse(route('home'));
     }
 }
