@@ -36,8 +36,8 @@ Route::prefix('/ziekenboeg')
         });
 
         Route::middleware(['auth'])->group(function () {
-//            Route::get('/', [HomeController::class, 'home'])
-//                ->name('home');
+            Route::get('/home', [\App\Http\Controllers\Ziekenboeg\HomeController::class, 'home'])
+                ->name('home');
 
             Route::post('/logout', [AuthController::class, 'logout'])
                 ->name('logout');
