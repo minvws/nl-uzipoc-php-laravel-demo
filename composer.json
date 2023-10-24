@@ -8,7 +8,8 @@
         "guzzlehttp/guzzle": "^7.8",
         "laravel/framework": "^v10.28",
         "laravel/tinker": "^2.8",
-        "minvws/openid-connect-php-laravel": "^0.0.6"
+        "minvws/openid-connect-php-laravel": "^0.0.6",
+        "predis/predis": "^2.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
