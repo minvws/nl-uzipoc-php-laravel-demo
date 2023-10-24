@@ -24,17 +24,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('change-language/{locale}', LanguageController::class)->name('change-language');
 Route::get('privacy-statement', PrivacyStatementController::class)->name('privacy-statement');
 
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', IndexController::class)
-        ->name('index');
-    Route::get('/login', [AuthController::class, 'login'])
-        ->name('login');
-});
+Route::get('/', IndexController::class)->name('index');
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'home'])
-        ->name('home');
+Route::prefix('/ziekenboeg')
+    ->name('ziekenboeg.')
+    ->group(function() {
+        Route::middleware(['guest'])->group(function () {
+            Route::get('/login', [AuthController::class, 'login'])
+                ->name('login');
+        });
 
-    Route::post('/logout', [AuthController::class, 'logout'])
-        ->name('logout');
-});
+        Route::middleware(['auth'])->group(function () {
+            Route::get('/', [HomeController::class, 'home'])
+                ->name('home');
+
+            Route::post('/logout', [AuthController::class, 'logout'])
+                ->name('logout');
+        });
+    });
+
