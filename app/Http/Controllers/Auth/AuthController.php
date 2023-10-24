@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\View\Factory;
 
 class AuthController extends Controller
 {
-    public function login(): View|Factory
+    public function login(): RedirectResponse
     {
-        return view('auth.login');
+        return redirect()
+            ->route('oidc.login');
     }
 
     public function logout(): RedirectResponse

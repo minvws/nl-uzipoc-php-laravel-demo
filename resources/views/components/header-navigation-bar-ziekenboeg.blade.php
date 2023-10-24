@@ -7,7 +7,7 @@
     <div class="collapsing-element">
         <ul>
             <li>
-                <a href="{{ route('index') }}" @if(\Illuminate\Support\Facades\Route::currentRouteName() === 'index') aria-current="page" @endif><span class="icon icon-home">Home-icoon</span>@lang('Labs')</a>
+                <a href="{{ route('ziekenboeg.index') }}" @if(\Illuminate\Support\Facades\Route::currentRouteName() === 'ziekenboeg.index') aria-current="page" @endif><span class="icon icon-home">Home-icoon</span>@lang('Ziekenboeg')</a>
             </li>
         </ul>
 
@@ -20,7 +20,7 @@
         @else
             <ul>
                 <li>
-                    <a href="{{ route('ziekenboeg.login') }}"><span class="icon icon-user">@lang('User icon')</span>@lang('Login')</a>
+                    <a href="{{ route('oidc.login') }}"><span class="icon icon-user">@lang('User icon')</span>@lang('Login')</a>
                 </li>
             </ul>
         @endauth

@@ -30,13 +30,14 @@ Route::prefix('/ziekenboeg')
     ->name('ziekenboeg.')
     ->group(function() {
         Route::middleware(['guest'])->group(function () {
+            Route::get('/', \App\Http\Controllers\Ziekenboeg\IndexController::class)->name('index');
             Route::get('/login', [AuthController::class, 'login'])
                 ->name('login');
         });
 
         Route::middleware(['auth'])->group(function () {
-            Route::get('/', [HomeController::class, 'home'])
-                ->name('home');
+//            Route::get('/', [HomeController::class, 'home'])
+//                ->name('home');
 
             Route::post('/logout', [AuthController::class, 'logout'])
                 ->name('logout');
