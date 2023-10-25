@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
@@ -28,7 +27,7 @@ Route::get('/', IndexController::class)->name('index');
 
 Route::prefix('/ziekenboeg')
     ->name('ziekenboeg.')
-    ->group(function() {
+    ->group(function () {
         Route::middleware(['guest'])->group(function () {
             Route::get('/', \App\Http\Controllers\Ziekenboeg\IndexController::class)->name('index');
             Route::get('/login', [AuthController::class, 'login'])
@@ -43,4 +42,3 @@ Route::prefix('/ziekenboeg')
                 ->name('logout');
         });
     });
-
