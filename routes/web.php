@@ -29,7 +29,7 @@ Route::prefix('/ziekenboeg')
     ->name('ziekenboeg.')
     ->group(function () {
         Route::middleware(['guest'])->group(function () {
-            Route::get('/', \App\Http\Controllers\Ziekenboeg\IndexController::class)->name('index');
+            Route::get('/about', \App\Http\Controllers\Ziekenboeg\AboutController::class)->name('about');
             Route::get('/login', [AuthController::class, 'login'])
                 ->name('login');
         });

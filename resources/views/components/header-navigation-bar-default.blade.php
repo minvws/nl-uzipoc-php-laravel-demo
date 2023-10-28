@@ -14,13 +14,13 @@
         @auth
             <ul>
                 <li>
-                    <x-header-logout-button />
+                    <a href="{{ route('ziekenboeg.login') }}"><span class="icon icon-user">@lang('User icon')</span>Ziekenboeg</a>
                 </li>
             </ul>
         @else
             <ul>
                 <li>
-                    <a href="{{ route('ziekenboeg.index') }}"><span class="icon icon-user">@lang('User icon')</span>@lang('Login')</a>
+                    <a href="{{ route('ziekenboeg.login') }}"><span class="icon icon-user">@lang('User icon')</span>@lang('Login')</a>
                 </li>
             </ul>
         @endauth

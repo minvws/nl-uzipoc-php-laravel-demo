@@ -6,3 +6,7 @@
 @section('header')
     <x-header />
 @endsection
+
+@section('footer')
+    <x-footer />
+@endsection

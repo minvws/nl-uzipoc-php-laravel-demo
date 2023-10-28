@@ -7,13 +7,13 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class AuthController extends Controller
 {
-    public function login(): RedirectResponse
+    public function login(): View
     {
-        return redirect()
-            ->route('oidc.login');
+        return view('auth.login');
     }
 
     public function logout(): RedirectResponse

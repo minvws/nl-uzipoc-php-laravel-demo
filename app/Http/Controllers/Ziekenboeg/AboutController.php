@@ -6,10 +6,10 @@ namespace App\Http\Controllers\Ziekenboeg;
 
 use App\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class AboutController extends Controller
 {
     public function __invoke()
     {
-        return view('ziekenboeg.index');
+        return view('ziekenboeg.about');
     }
 }

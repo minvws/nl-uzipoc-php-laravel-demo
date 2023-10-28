@@ -6,3 +6,7 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 @import "layout-authentication";
 
 @import "ziekenboeg/styles";
+
+footer {
+    border-top: 1px solid #D9EBF7;
+}

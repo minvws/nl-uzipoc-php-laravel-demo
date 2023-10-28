@@ -6,6 +6,8 @@
     padding-left: 0;
 
     li {
+        border: 1px solid #98ABBD;
+        border-radius: 1px;
         background-color: #fff;
         list-style: none;
         min-width: 17rem;
@@ -37,9 +39,7 @@
 
 .layout-authentication {
     .external-login {
-        background-color: var(--grey-1);
         flex-direction: column;
-        padding: 1.5rem;
         width: 100%;
         gap: 1.5rem;
     }

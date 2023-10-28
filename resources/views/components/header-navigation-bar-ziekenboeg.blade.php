@@ -1,3 +1,4 @@
+@auth
 <nav
     data-open-label="Menu"
     data-close-label="Sluit menu"
@@ -11,18 +12,11 @@
             </li>
         </ul>
 
-        @auth
-            <ul>
-                <li>
-                    <x-header-logout-button />
-                </li>
-            </ul>
-        @else
-            <ul>
-                <li>
-                    <a href="{{ route('oidc.login') }}"><span class="icon icon-user">@lang('User icon')</span>@lang('Login')</a>
-                </li>
-            </ul>
-        @endauth
+        <ul>
+            <li>
+                <x-header-logout-button />
+            </li>
+        </ul>
     </div>
 </nav>
+@endauth

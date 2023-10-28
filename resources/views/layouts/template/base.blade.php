@@ -12,18 +12,20 @@
 </head>
 <body>
 @yield('header')
-@if (session()->has('error'))
-    <section role="alert" class="error no-print" aria-label="{{ __('error') }}">
-        <div>
-            <p><span>@lang('Error'):</span> {{ session('error') }} {{ session('error_description') }}</p>
-        </div>
-    </section>
-@endif
+
 <main id="main-content" tabindex="-1">
+    @if (session()->has('error'))
+        <section role="alert" class="error no-print" aria-label="{{ __('error') }}">
+            <div>
+                <p><span>@lang('Error'):</span> {{ session('error') }} {{ session('error_description') }}</p>
+            </div>
+        </section>
+    @endif
+
     @yield('content')
 </main>
 
-<x-footer />
+@yield('footer')
 @stack('scripts')
 </body>
 </html>
