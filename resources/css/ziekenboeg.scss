@@ -1,0 +1,41 @@
+$ro-font-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/fonts";
+$ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
+
+@import "@minvws/manon/header-content-wrapper";
+@import "@minvws/nl-rdo-rijksoverheid-ui-theme/scss/main";
+@import "external-login";
+@import "layout-authentication";
+
+@import "ziekenboeg/styles";
+
+footer {
+    border-top: 1px solid #D9EBF7;
+}
+
+.logo {
+    max-height: var(--logo-height);
+    max-width: var(--logo-width);
+    display: flex;
+    align-items: center;
+}
+
+body > header {
+    border: solid var(--header-navigation-border-color);
+    border-width: 0 0 1px 0;
+
+    > div {
+        .collapsing-element {
+            justify-content: space-between;
+        }
+    }
+}
+
+body > footer nav {
+    a,
+    a:focus,
+    a:hover,
+    a:active,
+    a:visited, {
+        outline-offset: var(--footer-navigation-link-outline-offset);
+    }
+}

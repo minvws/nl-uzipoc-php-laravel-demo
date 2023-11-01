@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
@@ -24,17 +23,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('change-language/{locale}', LanguageController::class)->name('change-language');
 Route::get('privacy-statement', PrivacyStatementController::class)->name('privacy-statement');
 
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', IndexController::class)
-        ->name('index');
-    Route::get('/login', [AuthController::class, 'login'])
-        ->name('login');
-});
+Route::get('/', IndexController::class)->name('index');
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'home'])
-        ->name('home');
+Route::prefix('/ziekenboeg')
+    ->name('ziekenboeg.')
+    ->group(function () {
+        Route::redirect('/', '/ziekenboeg/home');
+        Route::get('/about', \App\Http\Controllers\Ziekenboeg\AboutController::class)->name('about');
+        Route::get('/contact', \App\Http\Controllers\Ziekenboeg\ContactController::class)->name('contact');
+        Route::middleware(['guest'])->group(function () {
+            Route::get('/login', [AuthController::class, 'login'])
+                ->name('login');
+        });
 
-    Route::post('/logout', [AuthController::class, 'logout'])
-        ->name('logout');
-});
+        Route::middleware(['auth'])->group(function () {
+            Route::get('/home', [\App\Http\Controllers\Ziekenboeg\HomeController::class, 'home'])
+                ->name('home');
+
+            Route::post('/logout', [AuthController::class, 'logout'])
+                ->name('logout');
+        });
+    });

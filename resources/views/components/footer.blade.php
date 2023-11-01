@@ -10,8 +10,7 @@
             </nav>
         </div>
         <div class="meta">
-            <p>{{ __('Version')}} {{ App\Http\Kernel::applicationVersion() }}
-            </p>
+            <p>{{ __('Version')}} {{ App\Http\Kernel::applicationVersion() }}</p>
         </div>
     </div>
 </footer>

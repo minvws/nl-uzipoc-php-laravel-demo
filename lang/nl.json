@@ -10,9 +10,21 @@
     "Login using one of the options below:": "Log in via een van de onderstaande opties:",
     "Login with": "Inloggen met",
     "Explanation": "Toelichting",
-    "Please note, this view is part of the pilot environment.": "Let op, deze weergave is onderdeel van de pilot-omgeving.",
+    "You are currently in the test environment.": "U bevindt zich in de testomgeving.",
+    "Bring me back to labs": "Breng mij terug naar de proeftuin",
     "User icon": "Gebruikersicoon",
     "Main navigation": "Hoofdnavigatie",
     "Organization": "Instantie",
-    "Roles": "Rollen"
+    "Roles": "Rollen",
+    "Welcome to UZI Labs": "Welkom bij de proeftuin",
+    "Environments": "Omgevingen",
+    "Labs": "De proeftuin",
+    "the health application": "de ziekenboeg",
+    "Logged in as": "Ingelogd als",
+    "Login cancelled": "Inlog geannuleerd",
+    "You are signed in in the employee portal of the health application!": "U bent ingelogd in het medewerkers portaal van de ziekenboeg!",
+    "We received the following data from the UZI-register.": "We hebben de volgende gegevens van het UZI-register ontvangen.",
+    "This is a demo Health application": "Dit is een demo zorgapplicatie",
+    "Do you have any questions?": "Heeft u vragen?",
+    "Mail your questions to <a href=\"mailto::mail\">:mail</a>.": "Mail uw vragen naar <a href=\"mailto::mail\">:mail</a>."
 }

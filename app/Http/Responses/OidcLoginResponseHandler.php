@@ -21,7 +21,7 @@ class OidcLoginResponseHandler implements LoginResponseHandlerInterface
         $user = UziUser::deserializeFromObject($userInfo);
         if ($user === null) {
             return redirect()
-                ->route('login')
+                ->route('ziekenboeg.home')
                 ->with('error', __('Something went wrong with logging in, please try again.'));
         }
 
@@ -30,6 +30,6 @@ class OidcLoginResponseHandler implements LoginResponseHandlerInterface
         }
 
         Auth::setUser($user);
-        return new RedirectResponse(route('home'));
+        return new RedirectResponse(route('ziekenboeg.home'));
     }
 }

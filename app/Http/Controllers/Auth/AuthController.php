@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\View\Factory;
+use Illuminate\View\View;
 
 class AuthController extends Controller
 {
-    public function login(): View|Factory
+    public function login(): View
     {
         return view('auth.login');
     }
