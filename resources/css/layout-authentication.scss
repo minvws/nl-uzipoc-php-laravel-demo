@@ -3,3 +3,14 @@
 :root {
     --layout-authentication-max-width: 40rem;
 }
+
+.layout-authentication {
+    --form-base-background-color: #fff;
+
+    form {
+        border: 1px solid #A3B0BF;
+        border-radius: 8px;
+        padding: 32px;
+        gap: 32px;
+    }
+}

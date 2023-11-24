@@ -160,4 +160,15 @@ class UziUser implements Authenticatable
     {
         return !empty($this->uziId);
     }
+
+    public function getDisplayName(): string
+    {
+        if (empty($this->initials) || empty($this->surname)) {
+            return $this->uziId;
+        }
+
+        return $this->initials
+            . ($this->surnamePrefix ? " " . $this->surnamePrefix : "")
+            . " " . $this->surname;
+    }
 }

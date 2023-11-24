@@ -4,3 +4,24 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 @import "@minvws/nl-rdo-rijksoverheid-ui-theme/scss/main";
 @import "external-login";
 @import "layout-authentication";
+
+footer .two-thirds-one-third {
+    justify-content: space-between;
+
+    nav {
+        width: auto;
+    }
+}
+
+
+.version-history {
+    .version-history-version-number {
+        min-width: 10%;
+    }
+    .version-history-date {
+        min-width: 10%;
+    }
+    .version-history-changes {
+        width: 65%;
+    }
+}

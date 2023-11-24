@@ -3,9 +3,8 @@
     'navigationComponent' => 'header-navigation-bar-default',
 ])
 
-<header>
+<header class="page-header">
     <x-header-skip-to-content />
-    <x-header-page-meta />
     <div>
         <x-dynamic-component :component="$logoComponent" />
         <x-dynamic-component :component="$navigationComponent" />

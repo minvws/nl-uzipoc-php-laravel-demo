@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Ziekenboeg\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
@@ -13,7 +13,7 @@ class AuthController extends Controller
 {
     public function login(): View
     {
-        return view('auth.login');
+        return view('ziekenboeg.auth.login');
     }
 
     public function logout(): RedirectResponse
@@ -21,6 +21,6 @@ class AuthController extends Controller
         Auth::logout();
 
         return redirect()
-            ->route('index');
+            ->route('ziekenboeg.home');
     }
 }

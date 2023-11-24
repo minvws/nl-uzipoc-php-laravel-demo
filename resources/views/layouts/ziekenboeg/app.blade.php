@@ -4,11 +4,6 @@
 @endpush
 
 @section('header')
-    <section role="alert" class="explanation no-print" aria-label="{{ __('Explanation') }}">
-        <div>
-            <p><span>@lang('Explanation'):</span> @lang('You are currently in the test environment.') <a href="{{ route('index') }}">@lang('Bring me back to labs')</a>.</p>
-        </div>
-    </section>
     <x-header-ziekenboeg logo-component="header-logo-ziekenboeg" navigation-component="header-navigation-bar-ziekenboeg" />
 @endsection
 

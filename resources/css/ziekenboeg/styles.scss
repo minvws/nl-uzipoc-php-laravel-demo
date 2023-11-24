@@ -1,6 +1,6 @@
 :root {
-    --ruby-red: #76d2b6;
-    --ruby-red-background-color: #FFEA9E;
+    --ruby-red: #5279A9;
+    --ruby-red-background-color: #5279A9;
     --ruby-red-text-color: #000000;
 
     /* Text colors */
@@ -39,7 +39,11 @@
 
     /* Ghost */
     --ruby-red-ghost-background-color: #ffffff;
-    --ruby-red-ghost-text-color: #76d2b6;
+    --ruby-red-ghost-text-color: #5279A9;
+
+    --button-ghost-hover-text-color: #ffffff;
+    --button-ghost-active-text-color: #ffffff;
+    --button-ghost-focus-text-color: #ffffff;
 
     /* Branding color */
     --branding-color-1-background-color: var(--ruby-red-background-color);
@@ -52,13 +56,18 @@
     --link-text-color: var(--ruby-red-text-color);
     --link-font-size: inherit;
 
-    --footer-navigation-link-text-color: var(--link-text-color);
-    --footer-background-color: #ffffff;
+    --footer-background-color: #5279A9;
+    --footer-navigation-link-text-color: #ffffff;
 
 
     /* Custom styling for Ziekenboeg based on Manon Open Theme */
 
     --button-base-border-radius: 4px;
+    --button-base-text-color: #ffffff;
+    --button-base-hover-text-color: #ffffff;
+    --button-base-active-text-color: #ffffff;
+    --button-base-focus-text-color: #ffffff;
+
     --link-border-radius: 4px;
 
     //--application-base-text-color: #1a1a1a;
@@ -96,6 +105,9 @@
     //--header-navigation-max-width: 100%;
     //--header-navigation-align-items: stretch;
     //--header-navigation-justify-content: space-between;
+    --header-border-width: 0 0 1px 0;
+    --header-border-color: #cccccc;
+
     --header-navigation-border-width: 0;
     --header-navigation-border-color: #cccccc;
 
@@ -111,10 +123,15 @@
     --footer-navigation-link-focus-outline-offset: 0.25rem;
 
     //
-    --header-navigation-button-background-color: #FFEA9E;
-    --header-navigation-button-active-background-color: var(--header-navigation-button-background-color);
-    --header-navigation-button-focus-background-color: var(--header-navigation-button-background-color);
-    --header-navigation-button-hover-background-color: var(--header-navigation-button-background-color);
+    --header-navigation-button-background-color: #5279A9;
+    --header-navigation-button-active-background-color: #486C99;
+    --header-navigation-button-focus-background-color: #486C99;
+    --header-navigation-button-hover-background-color: #486C99;
+
+    --header-navigation-button-text-color: #ffffff;
+    --header-navigation-button-active-text-color: #ffffff;
+    --header-navigation-button-focus-text-color: #ffffff;
+    --header-navigation-button-hover-text-color: #ffffff;
     //
     ///* Content wrapper */
     //--header-navigation-content-wrapper-gap: 0;
@@ -171,6 +188,16 @@
     //--pagination-link-hover-background-color: var(--basic-bold-accent-color-1);
     //
     ///* Nav */
+
+    --sidemenu-nav-width: 25rem;
+
+    --navigation-link-icon: var(--icon-chevron-right);
+
+    --sidemenu-nav-padding-top: 6rem;
+    --sidemenu-nav-padding-right: 2rem;
+    --sidemenu-nav-padding-bottom: 6rem;
+    --sidemenu-nav-padding-left: 2rem;
+
     //--sidemenu-nav-border-width: 0;
     //--sidemenu-nav-padding-top: 0;
     //
@@ -382,4 +409,10 @@
     //--body-text-large-strong-font-weight: var(--text-set-strong-font-weight);
     //
     //--headings-base-set-font-family: "Open Sans", sans-serif;
+
+    --hero-height: 25rem;
+
+    --header-navigation-link-visited-icon-text-color: #ffffff;
+
+    --tile-background-color: #ffffff;
 }

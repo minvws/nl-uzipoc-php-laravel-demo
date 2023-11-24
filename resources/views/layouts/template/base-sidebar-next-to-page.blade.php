@@ -10,27 +10,29 @@
     <link href="{{ asset('img/favicon.ico') }}" rel="shortcut icon">
     @stack('styles')
 </head>
-<body>
-@yield('header')
-
-<main id="main-content" tabindex="-1" @hasSection('sidemenu') class="sidemenu" @endif>
+<body class="sidemenu">
     @hasSection('sidemenu')
         @yield('sidemenu')
     @endif
 
-    @if (session()->has('error'))
-        <section role="alert" class="error no-print" aria-label="{{ __('error') }}">
-            <div>
-                <p><span>@lang('Error'):</span> {{ session('error') }} {{ session('error_description') }}</p>
-            </div>
-        </section>
-    @endif
+    <div class="page-content">
+        @yield('header')
 
+        <main id="main-content" tabindex="-1">
+            @if (session()->has('error'))
+                <section role="alert" class="error no-print" aria-label="{{ __('error') }}">
+                    <div>
+                        <p><span>@lang('Error'):</span> {{ session('error') }} {{ session('error_description') }}</p>
+                    </div>
+                </section>
+            @endif
 
-    @yield('content')
-</main>
+            @yield('content')
+        </main>
 
-@yield('footer')
-@stack('scripts')
+        @yield('footer')
+    </div>
+
+    @stack('scripts')
 </body>
 </html>
