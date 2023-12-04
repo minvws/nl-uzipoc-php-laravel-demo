@@ -5,6 +5,15 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 @import "external-login";
 @import "layout-authentication";
 
+/* Manon */
+@import "manon/overrides/bg-color-offset";
+
+// TODO: Add this in the theme package
+:root {
+    --accordion-button-icon-after-open-content: var(--icon-chevron-up);
+    --accordion-button-icon-after-close-content: var(--icon-chevron-down);
+}
+
 footer .two-thirds-one-third {
     justify-content: space-between;
 
@@ -12,7 +21,6 @@ footer .two-thirds-one-third {
         width: auto;
     }
 }
-
 
 .version-history {
     .version-history-version-number {

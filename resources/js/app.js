@@ -1,5 +1,9 @@
 import './bootstrap';
 
+// Import manon JS components
+import '@minvws/manon/accordion';
+import '@minvws/manon/collapsible';
+
 // wait for the document to be loaded
 document.addEventListener('DOMContentLoaded', function() {
     bindLogoutClickHandler();

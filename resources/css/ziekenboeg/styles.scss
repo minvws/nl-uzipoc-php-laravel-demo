@@ -1,6 +1,6 @@
 :root {
-    --ruby-red: #5279A9;
-    --ruby-red-background-color: #5279A9;
+    --ruby-red: #5279a9;
+    --ruby-red-background-color: #5279a9;
     --ruby-red-text-color: #000000;
 
     /* Text colors */
@@ -28,7 +28,7 @@
     --ruby-red-selected-text-color: var(--ruby-red-text-color);
 
     /* Tint 1 */
-    --ruby-red-tint-1: #FFEA9E;
+    --ruby-red-tint-1: #ffea9e;
     --ruby-red-tint-1-background-color: var(--ruby-red-tint-1);
     --ruby-red-tint-1-text-color: var(--ruby-red-text-color-dark);
 
@@ -37,10 +37,14 @@
     --ruby-red-tint-2-background-color: var(--ruby-red-tint-2);
     --ruby-red-tint-2-text-color: var(--ruby-red-text-color-dark);
 
+    /* Button */
+    --button-base-border-radius: 10rem;
+
     /* Ghost */
     --ruby-red-ghost-background-color: #ffffff;
-    --ruby-red-ghost-text-color: #5279A9;
+    --ruby-red-ghost-text-color: #5279a9;
 
+    --button-ghost-border-radius: 10rem;
     --button-ghost-hover-text-color: #ffffff;
     --button-ghost-active-text-color: #ffffff;
     --button-ghost-focus-text-color: #ffffff;
@@ -56,9 +60,8 @@
     --link-text-color: var(--ruby-red-text-color);
     --link-font-size: inherit;
 
-    --footer-background-color: #5279A9;
+    --footer-background-color: #5279a9;
     --footer-navigation-link-text-color: #ffffff;
-
 
     /* Custom styling for Ziekenboeg based on Manon Open Theme */
 
@@ -123,10 +126,10 @@
     --footer-navigation-link-focus-outline-offset: 0.25rem;
 
     //
-    --header-navigation-button-background-color: #5279A9;
-    --header-navigation-button-active-background-color: #486C99;
-    --header-navigation-button-focus-background-color: #486C99;
-    --header-navigation-button-hover-background-color: #486C99;
+    --header-navigation-button-background-color: #5279a9;
+    --header-navigation-button-active-background-color: #486c99;
+    --header-navigation-button-focus-background-color: #486c99;
+    --header-navigation-button-hover-background-color: #486c99;
 
     --header-navigation-button-text-color: #ffffff;
     --header-navigation-button-active-text-color: #ffffff;
@@ -158,9 +161,11 @@
 
     /* Active link */
     --header-navigation-link-active-border-color: var(--branding-color-1);
-    --header-navigation-link-active-text-color: var(--header-navigation-link-hover-text-color);
+    --header-navigation-link-active-text-color: var(
+        --header-navigation-link-hover-text-color
+    );
     --header-navigation-link-visited-active-text-color: var(
-            --header-navigation-link-hover-text-color
+        --header-navigation-link-hover-text-color
     );
 
     --header-navigation-link-active-font-weight: bold;

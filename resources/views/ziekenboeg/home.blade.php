@@ -60,21 +60,31 @@
             <a class="button ghost" href="#">Bekijk al het nieuws</a>
         </div>
     </section>
+
     <section>
         <div>
-            <h2>Alles voor uw bezoek</h2>
-            <div class="column-2 new-card">
+            <h2>Alles voor uw bezoek:</h2>
+
+            <div class="half reversed">
                 <div>
-                    <div class="image-cover">
+                    <h2>Uw bezoek</h2>
+                    <div>
+                        <p>Wij hebben alle informatie alvast voor u op een rijtje gezet zodat u zich in alle rust kunt voorbereiden.</p>
+                        <a class="button ghost" href="#">Bereid u alvast voor</a>
+                    </div>
+                </div>
+
+                <div class="image-half">
+                    <div class="image-container">
                         <img src="{{ asset('img/appelboom.png') }}" alt="Foto van een strand">
                     </div>
                 </div>
-                <div>
-                    <h3>Uw bezoek</h3>
-                    <p>Wij hebben alle informatie alvast voor u op een rijtje gezet zodat u zich in alle rust kunt voorbereiden.</p>
-                    <a class="button ghost" href="#">Bereid u alvast voor</a>
-                </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
             <div class="column-3 navigation-group">
                 <div>
                     <h4>De details</h4>

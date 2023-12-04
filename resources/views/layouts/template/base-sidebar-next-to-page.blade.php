@@ -15,7 +15,7 @@
         @yield('sidemenu')
     @endif
 
-    <div class="page-content">
+    <div class="page-content ziekenboeg">
         @yield('header')
 
         <main id="main-content" tabindex="-1">

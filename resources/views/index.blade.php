@@ -25,7 +25,7 @@
     <section>
         <div>
             <h2>Zo werkt de proeftuin</h2>
-            <p>Om het inloggen met de huidige versie van UZI-Online en de aansluiting van applicaties en middelen te testen werkt de proeftuin met een eigen versie van het UZI-register. In het UZI-register van de proeftuin zijn test zorgidentiteiten opgenomen.</p>
+            <p>Om het inloggen met de huidige versie van UZI-Online en de aansluiting van applicaties en middelen te testen werkt de proeftuin met een eigen versie van het UZI-register. In het UZI-register van de proeftuin zijn <a href="{{ route('test-identities') }}">test zorgidentiteiten</a> opgenomen.</p>
             <p>Het nieuwe stelsel is nog in ontwikkeling. Daarmee verandert ook de proeftuin de komende tijd. Op die manier testen we samen wat het beste werkt.</p>
             <a href="{{ route('about') }}" class="button ghost">Lees meer over de proeftuin</a>
         </div>
@@ -35,7 +35,7 @@
         <div>
             <h2>Inloggen via UZI-Online uitproberen</h2>
             <p>
-                In de proeftuin kunt u ervaren hoe inloggen via UZI-Online gaat werken. We hebben daarom als voorbeeld ‘De Ziekenboeg’ gemaakt. Inloggen bij de Ziekenboeg kan met een testidentiteit of de inlogmiddelen die beschikbaar zijn in de proeftuin.
+                In de proeftuin kunt u ervaren hoe inloggen via UZI-Online gaat werken. We hebben daarom als voorbeeld ‘De Ziekenboeg’ gemaakt. Inloggen bij de Ziekenboeg kan met <a href="{{ route('test-identities') }}">een testidentiteit of de inlogmiddelen die beschikbaar zijn in de proeftuin</a>.
             </p>
             <p>
                 Op basis van de identiteit waarmee wordt ingelogd wordt de data die hoort bij de identiteit uit het proeftuin UZI-register opgehaald en na inloggen getoond in de interface van de Ziekenboeg.

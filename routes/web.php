@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TestIdentitiesController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
@@ -27,6 +28,7 @@ Route::get('change-language/{locale}', LanguageController::class)->name('change-
 Route::get('privacy-statement', PrivacyStatementController::class)->name('privacy-statement');
 
 Route::get('about', AboutController::class)->name('about');
+Route::get('test-identities', TestIdentitiesController::class)->name('test-identities');
 
 Route::prefix('ziekenboeg')
     ->name('ziekenboeg.')

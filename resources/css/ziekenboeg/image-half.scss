@@ -1,0 +1,106 @@
+/* Ziekenboeg new card */
+
+.half {
+    $breakpoint: 70rem;
+
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    background-color: #5279a9;
+    color: #fff;
+    padding: 0;
+    width: 100%;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+
+    > div {
+        padding: 2rem;
+        box-sizing: border-box;
+
+        &.image-half {
+            width: 100%;
+            padding: 0;
+
+            .image-container {
+                margin: 0;
+                height: 100%;
+                max-height: 100%;
+                width: 100%;
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    min-height: 100%;
+                    width: 100%;
+                    min-width: 100%;
+                }
+            }
+        }
+
+        button,
+        a.button,
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"],
+        a.button:visited {
+            background-color: transparent;
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+
+    @media (min-width: $breakpoint) {
+        > div {
+            max-width: 50%;
+
+            &.image-half {
+                position: absolute;
+                height: 100%;
+                min-width: 50%;
+                top: 0;
+                right: 0;
+
+                .image-container {
+                    margin: 0;
+                    height: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+
+    /* Reversed layout */
+    &.reversed {
+        flex-direction: column-reverse;
+
+        > div {
+            &.image-half {
+                .image-container {
+                    max-height: 20rem;
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint) {
+            flex-direction: row-reverse;
+
+            > div {
+                &.image-half {
+                    right: auto;
+                    left: 0;
+
+                    .image-container {
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

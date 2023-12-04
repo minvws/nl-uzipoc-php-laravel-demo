@@ -9,10 +9,15 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 @import "layout-authentication";
 
 @import "ziekenboeg/styles";
+@import "ziekenboeg/hero";
+@import "ziekenboeg/tile";
+@import "ziekenboeg/main";
+@import "ziekenboeg/form-button";
+@import "ziekenboeg/image-half";
 
 footer,
-.page-footer{
-    border-top: 1px solid #D9EBF7;
+.page-footer {
+    border-top: 1px solid #d9ebf7;
 }
 
 .logo {
@@ -41,20 +46,19 @@ body > footer,
         a:focus,
         a:hover,
         a:active,
-        a:visited, {
+        a:visited {
             outline-offset: var(--footer-navigation-link-outline-offset);
         }
     }
 }
 
 .icon-small::before {
-    --link-icon-font-size: .7rem;
-    --link-hover-icon-font-size: .7rem;
-    --link-focus-icon-font-size: .7rem;
-    --link-active-icon-font-size: .7rem;
-    --link-visited-icon-font-size: .7rem;
+    --link-icon-font-size: 0.7rem;
+    --link-hover-icon-font-size: 0.7rem;
+    --link-focus-icon-font-size: 0.7rem;
+    --link-active-icon-font-size: 0.7rem;
+    --link-visited-icon-font-size: 0.7rem;
 }
-
 
 .space-between {
     display: flex;
@@ -70,7 +74,7 @@ nav.ziekenboeg-sidemenu {
     }
 
     ul {
-      padding: 0;
+        padding: 0;
     }
 
     .gaps {
@@ -78,13 +82,6 @@ nav.ziekenboeg-sidemenu {
         flex-direction: column;
         gap: 1.5rem;
     }
-}
-
-.new-card {
-    background-color: #5279A9;
-    color: #ffffff;
-
-    --h3-text-color: #ffffff;
 }
 
 .navigation-group {
@@ -99,7 +96,7 @@ nav.ziekenboeg-sidemenu {
 
     padding-bottom: 6rem;
     flex-grow: 1;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     z-index: 0;
 }
 
