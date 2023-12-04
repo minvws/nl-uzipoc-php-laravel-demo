@@ -15,11 +15,11 @@
                 </p>
 
                 <p>
-                    De demo applicatie geeft aan welke gegevens  uit het proeftuin UZI register zijn opgehaald voor de testidentiteit waarmee is ingelogd.
+                    De demo applicatie geeft aan welke gegevens  uit het proeftuin UZI-register zijn opgehaald voor de testidentiteit waarmee is ingelogd.
                 </p>
 
                 <p>
-                    Op basis van die gegevens kunnen zorgapplicaties identiteiten autoriseren.
+                    Op basis van die gegevens kunnen zorgplatforms identiteiten autoriseren.
                 </p>
             </div>
             <div class="sticky-bottom">
@@ -38,15 +38,14 @@
 @section('content')
     <section>
         <div>
-            <h1>@lang('Ziekenboeg')</h1>
-            <p>@lang('You are signed in in the employee portal of the health application!')</p>
+            <h1>U bent succesvol ingelogd bij de Ziekenboeg.</h1>
+            <p>We hebben de volgende gegevens voor deze testidentiteit uit het UZI-register opgehaald:</p>
         </div>
     </section>
 
     <section>
         <div>
-            <h2>@lang('Data')</h2>
-            <p>@lang('We received the following data from the UZI-register.')</p>
+            <h2>Gegevens</h2>
             <dl>
                 <div>
                     <dt>Initialen</dt>
@@ -71,20 +70,21 @@
             </dl>
 
             <h3>@lang('Relations')</h3>
-            @foreach($user->uras as $ura)
+            @foreach($user->uras as $key => $ura)
+                <b>Relatie {{ $key + 1 }}</b>
                 <dl>
                     <div>
-                        <dt>Naam abonee</dt>
+                        <dt>Organisatie</dt>
                         <dd>{{ $ura->entityName }}</dd>
                     </div>
                     <div>
-                        <dt>Abonnee nummer</dt>
+                        <dt>URA</dt>
                         <dd>{{ $ura->ura }}</dd>
                     </div>
                     <div>
-                        <dt>Rol</dt>
+                        <dt>Rolcodes</dt>
                         <dd>@foreach($ura->roles as $role)
-                                {{ $role->code }} ({{$role->name}})
+                                {{ $role->code }} ({{$role->name}}) <br>
                             @endforeach</dd>
                     </div>
                 </dl>

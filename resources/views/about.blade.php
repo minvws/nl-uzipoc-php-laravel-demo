@@ -15,15 +15,15 @@
             <h1>@lang('About') @lang('UZI Labs')</h1>
             <p class="emphasized">De proeftuin is een testomgeving voor applicatiebeheerders in de zorg en leveranciers van inlogmiddelen.</p>
 
-            <p>In de proeftuin kan het vernieuwde UZI-stelsel (werknaam UZI-Online) door derde partijen worden getest. Leveranciers van zorgapplicaties en inlogmiddelen kunnen ervaren hoe inloggen via UZI-Online werkt en kunnen een aanvraag indienen om aan te sluiten op UZI-Online. Hoe dat werkt vindt u <a href="{{ route('index') }}">op de landingspagina.</a></p>
-            <p>De proeftuin is ontwikkeld door het Ministerie van Volksgezondheid, Welzijn en Sport. Het nieuwe UZI-stelsel is op dit moment in ontwikkeling. Daarmee is de software—en dus ook de proeftuin—mogelijk onderhevig aan verandering door implementatiekeuzes tot het nieuwe stelsel in werking treedt. Ondersteuning en onderhoud van de proeftuin geschiedt op best effort tijdens kantooruren.</p>
+            <p>In de proeftuin kan het nieuwe UZI-stelsel dat we ontwikkelen worden getest. Platform- en Middelenleveranciers kunnen ervaren hoe inloggen via UZI-Online werkt en kunnen zelf aan de slag om een aansluiting op UZI-Online te maken.</p>
+            <p>De proeftuin is ontwikkeld door het Ministerie van Volksgezondheid, Welzijn en Sport. Het nieuwe stelsel is nog in ontwikkeling. Daarmee verandert ook de proeftuin de komende tijd. Op die manier testen we samen wat het beste werkt. Ondersteuning en onderhoud van de proeftuin geschiedt op best effort tijdens kantooruren.</p>
         </div>
     </section>
 
     <section>
         <div>
             <h2>Versiegeschiedenis</h2>
-            <p>De laatste update van de proeftuin was op 14-11-2023.</p>
+            <p>De laatste update van de proeftuin was op 04-12-2024.</p>
             <table class="version-history">
                 <caption>Versieoverzicht:</caption>
                 <thead>
@@ -35,24 +35,9 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>v1.0</td>
-                    <td>14-11-2023</td>
-                    <td>Lorem ipsum dolor sit amet</td>
-                </tr>
-                <tr>
-                    <td>v0.0.3</td>
-                    <td>21-10-2023</td>
-                    <td>Lorem ipsum</td>
-                </tr>
-                <tr>
-                    <td>v0.0.2</td>
-                    <td>20-10-2023</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat quam ut velit malesuada, ac sollicitudin metus pretium. Fusce a odio eu metus efficitur pharetra.</td></td>
-                </tr>
-                <tr>
-                    <td>v.0.01</td>
-                    <td>08-09-2023</td>
-                    <td>Lorem ipsum dolor set amet.</td>
+                    <td>v1.0.0</td>
+                    <td>04-12-2023</td>
+                    <td>Eerste release proeftuin</td>
                 </tr>
                 </tbody>
             </table>
@@ -63,10 +48,10 @@
         <div>
             <h2>Privacy</h2>
             <p>
-                In de <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/privacy">privacyverklaring van het Ministerie van Volksgezondheid, Welzijn en Sport</a> kunt u lezen hoe VWS omgaat met gegevensbescherming.
+                In de <a href="https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/privacy">privacyverklaring van het Ministerie van Volksgezondheid, Welzijn en Sport</a> is te lezen hoe VWS omgaat met gegevensbescherming.
             </p>
             <p>
-                In de proeftuin wordt gewerkt met testdata.  Er worden geen persoonsgegevens verwerkt. Wij registreren alleen het IP-adres van de computer die u gebruikt.  Dit is noodzakelijk voor de communicatie met de webservers van VWS. Het IP-adres wordt bewaard zolang als nodig is met oog op beveiliging, beheer en het opsporen met fouten en zolang de proeftuin operationeel is.
+                In de proeftuin wordt gewerkt met testdata. Wij registreren alleen het IP-adres van het gebruikte apparaat. Dit is noodzakelijk voor de communicatie met de webservers van het Ministerie van Volksgezondheid, Welzijn en Sport. Het IP-adres wordt niet langer bewaard dan nodig is met oog op beveiliging, beheer en het opsporen van fouten in de proeftuin. Verder worden er geen persoonsgegevens verwerkt in de proeftuin.
             </p>
         </div>
     </section>
@@ -74,9 +59,7 @@
     <section>
         <div>
             <h2>Contact</h2>
-            <p>
-                Voor vragen over de proeftuin, of het nieuwe UZI-stelsel, kunt u een e-mail sturen naar <a href="mailto:l.kielman@minvws.nl">l.kielman@minvws.nl</a>. De helpdesk is uitsluitend op werkdagen en tijdens kantooruren bereikbaar en biedt ondersteuning voor de proeftuin-omgeving op basis van best-effor
-            </p>
+            <p>Vragen over de proeftuin of het nieuwe UZI-stelsel kunnen worden gesteld via <a href="mailto:uzi-info@minvws.nl">uzi-info@minvws.nl</a>. De helpdesk is uitsluitend op werkdagen en tijdens kantooruren bereikbaar en biedt ondersteuning voor de proeftuin-omgeving op basis van best-effort.</p>
         </div>
     </section>
 @endsection

@@ -6,12 +6,10 @@
             <div class="gaps">
                 <h3>Inloggen bij de Ziekenboeg</h3>
 
-                <p>
-                    De inlogpagina van De Ziekenboeg is een voorbeeld van hoe zorgapplicaties UZI-Online kunnen integreren naast andere inlogmethoden.
-                </p>
+                <p>De inlogpagina van De Ziekenboeg is een voorbeeld van hoe zorgplatforms UZI-Online kunnen aansluiten naast andere inlogmethoden.</p>
 
                 <p>
-                    Klik op <b>“Inloggen met Uzi-Online”</b> om verder te gaan.
+                    Klik op <b>“Inloggen met UZI-Online”</b> om verder te gaan.
                 </p>
             </div>
             <div class="sticky-bottom">
