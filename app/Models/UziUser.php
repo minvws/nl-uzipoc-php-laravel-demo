@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Exceptions\UziNoUziNumberException;
 use App\Services\Uzi\UziRoleService;
 use Exception;
 use Illuminate\Support\Facades\Log;
@@ -48,7 +49,7 @@ class UziUser implements Authenticatable
         }
         if (count($missingKeys) > 0) {
             Log::error("Uzi user missing required fields: " . implode(", ", $missingKeys));
-            return null;
+            throw new UziNoUziNumberException();
         }
 
 

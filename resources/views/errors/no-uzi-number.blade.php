@@ -11,7 +11,7 @@
                 </h1>
                 <p>@lang('You are currently not in the UZI-pilot.<br>Do you want to join the UZI-pilot? Send an email with the request that you want to join the UZI-pilot to') <a href="mailto:info-uzi@minvws.nl">info-uzi@minvws.nl</a>.</p>
 
-                <form method="post" action="{{ route('logout') }}" class="inline">
+                <form method="post" action="{{ route('ziekenboeg.users.logout') }}" class="inline">
                     @csrf
                     <input type="submit" value="{{ __('Logout') }}" />
                 </form>
