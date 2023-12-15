@@ -51,6 +51,9 @@ Route::prefix('ziekenboeg')
                 Route::get('home', [\App\Http\Controllers\Ziekenboeg\Users\HomeController::class, 'home'])
                     ->name('home');
 
+                Route::get('jwt', [\App\Http\Controllers\Ziekenboeg\Users\JwtController::class, 'home'])
+                    ->name('jwt');
+
                 Route::post('logout', [AuthController::class, 'logout'])
                     ->name('logout');
             });
