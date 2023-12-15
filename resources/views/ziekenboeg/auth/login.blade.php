@@ -2,8 +2,8 @@
 
 @section('sidemenu')
     <nav class="ziekenboeg-sidemenu">
-        <div class="space-between">
-            <div class="gaps">
+        <div>
+            <div class="sticky-top">
                 <h3>Inloggen bij de Ziekenboeg</h3>
 
                 <p>De inlogpagina van De Ziekenboeg is een voorbeeld van hoe zorgplatforms UZI-Online kunnen aansluiten naast andere inlogmethoden.</p>

@@ -6,8 +6,8 @@
 
 @section('sidemenu')
     <nav class="ziekenboeg-sidemenu">
-        <div class="space-between">
-            <div class="gaps">
+        <div>
+            <div class="sticky-top">
                 <h3>Welkom bij de Ziekenboeg</h3>
 
                 <p>

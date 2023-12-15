@@ -3,8 +3,8 @@
 
 @section('sidemenu')
     <nav class="ziekenboeg-sidemenu">
-        <div class="space-between">
-            <div class="gaps">
+        <div>
+            <div class="sticky-top">
                 <h3>Welkom bij De Ziekenboeg</h3>
 
                 <p>De Ziekenboeg is een fictief zorgplatform en dient als demo applicatie om het inloggen met UZI-Online te kunnen ervaren.</p>
