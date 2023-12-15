@@ -24,7 +24,7 @@
 
                             <div>
                                 <dt>Burgerservicenummer</dt>
-                                <dd>003116864</dd>
+                                <dd>958310828</dd>
                             </div>
 
                             <div>
@@ -188,24 +188,6 @@
                             <div>
                                 <dt>Rolcode(s)</dt>
                                 <dd>92.000 (Mondhygiënist)</dd>
-                            </div>
-                        </dl>
-
-                        <dl>
-                            <div>
-                                <dt>URA</dt>
-                                <dd>72649228</dd>
-                            </div>
-
-                            <div>
-                                <dt>Entiteit</dt>
-                                <dd>Tandartspraktijk Houtbeek</dd>
-                            </div>
-
-                            <div>
-                                <dt>Rolcode(s)</dt>
-                                <dd>02.000 (Tandarts),<br>
-                                    02.053 (Orthodontist)</dd>
                             </div>
                         </dl>
                     </div>

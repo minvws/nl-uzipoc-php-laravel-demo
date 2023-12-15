@@ -14,6 +14,7 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 @import "ziekenboeg/main";
 @import "ziekenboeg/form-button";
 @import "ziekenboeg/image-half";
+@import "ziekenboeg/sidemenu";
 
 footer,
 .page-footer {
@@ -29,9 +30,6 @@ footer,
 
 body > header,
 .page-header {
-    //border: solid var(--header-navigation-border-color);
-    //border-width: 0 0 1px 0;
-
     > div {
         .collapsing-element {
             justify-content: space-between;
@@ -60,30 +58,6 @@ body > footer,
     --link-visited-icon-font-size: 0.7rem;
 }
 
-.space-between {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 100%;
-}
-
-nav.ziekenboeg-sidemenu {
-    .back-to-proeftuin {
-        --navigation-link-icon: var(--icon-chevron-left);
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    .gaps {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-}
-
 .navigation-group {
     --navigation-list-padding: 0;
     --section-content-wrapper-gap: 1rem;
@@ -96,19 +70,11 @@ nav.ziekenboeg-sidemenu {
 
     padding-bottom: 6rem;
     flex-grow: 1;
-    background-color: #fafafa;
     z-index: 0;
 }
 
 .hero {
     z-index: 0;
-}
-
-// Align Terug naar de Proeftuin hoofdpagina to the bottom
-.sticky-bottom {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 2rem;
 }
 
 // Align footer items to the right
