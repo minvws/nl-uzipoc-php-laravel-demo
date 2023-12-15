@@ -8,6 +8,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
 use App\Http\Controllers\Ziekenboeg\Auth\AuthController;
+use App\Http\Controllers\Ziekenboeg\Auth\OidcLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,6 @@ Route::prefix('ziekenboeg')
                     ->name('logout');
             });
     });
+
+Route::get('oidc/login', OidcLoginController::class)
+    ->name('oidc.login');
