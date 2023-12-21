@@ -8,6 +8,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
 use App\Http\Controllers\Ziekenboeg\Auth\AuthController;
+use App\Http\Controllers\Ziekenboeg\Auth\OidcLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,7 +51,13 @@ Route::prefix('ziekenboeg')
                 Route::get('home', [\App\Http\Controllers\Ziekenboeg\Users\HomeController::class, 'home'])
                     ->name('home');
 
+                Route::get('jwt', \App\Http\Controllers\Ziekenboeg\Users\JwtController::class)
+                    ->name('jwt');
+
                 Route::post('logout', [AuthController::class, 'logout'])
                     ->name('logout');
             });
     });
+
+Route::get('oidc/login', OidcLoginController::class)
+    ->name('oidc.login');
