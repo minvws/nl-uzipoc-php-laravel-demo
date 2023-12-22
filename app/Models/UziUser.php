@@ -38,6 +38,18 @@ class UziUser implements Authenticatable
         }
     }
 
+    /**
+     * @param object{
+     *     relations: array<int, object{entity_name: string, ura: string, roles: string[]}>,
+     *     initials: ?string,
+     *     surname: ?string,
+     *     surname_prefix: ?string,
+     *     uzi_id: string,
+     *     loa_uzi: string,
+     *     loa_authn: string
+     * } $oidcResponse
+     * @throws UziNoUziNumberException
+     */
     public static function deserializeFromObject(object $oidcResponse): ?UziUser
     {
         $requiredKeys = ["relations", "initials", "surname", "surname_prefix", "uzi_id", "loa_uzi"];
