@@ -13,6 +13,6 @@ class JwtController extends Controller
     public function __invoke(Request $request): Response
     {
         return response($request->session()->get('oidc_jwt'))
-            ->header('Content-Type', 'application/jwt');
+            ->header('Content-Type', 'text/plain');
     }
 }
