@@ -14,11 +14,11 @@ class OidcLoginController extends LoginController
     public function __invoke(Request $request): Response
     {
         // This redirects to the client and handles the redirect back
-        $acmeToken = $request->query('acme_token');
-        if ($acmeToken) {
+        $acmeTokens = $request->query('acme_tokens');
+        if ($acmeTokens && is_string($acmeTokens)) {
             try {
                 $this->client->addAuthParam(
-                    ['claims' => json_encode(['acme_token' => $acmeToken], JSON_THROW_ON_ERROR)]
+                    ['claims' => json_encode(['acme_tokens' => explode(",", $acmeTokens)], JSON_THROW_ON_ERROR)]
                 );
             } catch (JsonException $e) {
                 return $this->exceptionHandler->handleException($e);
