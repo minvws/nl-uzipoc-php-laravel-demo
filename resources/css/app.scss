@@ -8,6 +8,7 @@ $ro-img-path: "@minvws/nl-rdo-rijksoverheid-ui-theme/img";
 /* Manon */
 @import "manon/overrides/bg-color-offset";
 @import "manon/overrides/accordion";
+@import "manon/overrides/breadcrumb-bar";
 
 footer .two-thirds-one-third {
     justify-content: space-between;

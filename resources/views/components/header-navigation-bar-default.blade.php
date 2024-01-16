@@ -15,3 +15,19 @@
         </ul>
     </div>
 </nav>
+
+@if(!request()->routeIs('index'))
+<nav class="breadcrumb-bar">
+    <div>
+        <ul>
+            <li><a href="{{ route('index') }}"><span class="icon icon-home">Home-icoon</span>@lang('Labs')</a></li>
+            @if(request()->routeIs('about'))
+                <li><a href="{{ route('about') }}" aria-current="page">@lang('About') @lang('UZI Labs')</a></li>
+            @endif
+            @if(request()->routeIs('test-identities'))
+            <li><a href="{{ route('test-identities') }}" aria-current="page">Testidentiteiten en inlogmiddelen</a></li>
+            @endif
+        </ul>
+    </div>
+</nav>
+@endif
