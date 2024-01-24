@@ -9,5 +9,10 @@
                 </ul>
             </nav>
         </div>
+        <div class="meta">
+            <p>
+                Versie v1.0.1
+            </p>
+        </div>
     </div>
 </footer>
