@@ -48,17 +48,17 @@
             <h2>Aansluiten op de proeftuin</h2>
             <h3 id="route_1">Route 1: Aansluiten als platformleverancier</h3>
             <p>
-                De proeftuin maakt het voor platformleveranciers mogelijk om het inloggen via UZI-Online te testen vanuit de applicaties die zij ontwikkelen. UZI-Online is gebouwd volgens de OpenID Connect (OIDC) standaard, waardoor aansluiten relatief eenvoudig is. Technische informatie is te vinden in de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/08/koppelvlak-specificatie-voor-platform-leveranciers">‘Koppelvlak specificatie voor platformleveranciers’ (PDF, nl)</a>.
+                De proeftuin maakt het voor platformleveranciers mogelijk om het inloggen via UZI-Online te testen vanuit de applicaties die zij ontwikkelen. UZI-Online is gebouwd volgens de OpenID Connect (OIDC) standaard, waardoor aansluiten relatief eenvoudig is. Technische informatie is te vinden in de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/08/koppelvlak-specificatie-voor-platform-leveranciers">'Koppelvlak specificatie voor platformleveranciers' (PDF, nl)</a>.
             </p>
             <p>
-                Voor het koppelen van een zorgplatform met UZI-Online, raadpleeg de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/08/aansluitdocumentatie-proeftuin">‘Aansluitdocumentatie voor platformleveranciers` (PDF, nl)</a>.
+                Voor het koppelen van een zorgplatform met UZI-Online, raadpleeg de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/08/aansluitdocumentatie-proeftuin">'Aansluitdocumentatie proeftuin voor platformleveranciers' (PDF, nl)</a>.
             </p>
             <h3 id="route_2">Route 2: Aansluiten als middelenleverancier</h3>
             <p>
-                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op UZI-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de ‘Koppelvlakspecificatie proeftuin’ (PDF, nl).
+                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op UZI-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/25/koppelvlakspecificatie-voor-middelenleveranciers">'Koppelvlakspecificatie voor middelenleveranciers' (PDF, nl)</a>.
             </p>
             <p>
-                Voor het koppelen van een inlogmiddel aan UZI-Online, raadpleeg de ‘Aansluitdocumentatie voor Middelenleveranciers (PDF, nl).
+                Voor het koppelen van een inlogmiddel aan UZI-Online, raadpleeg de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/25/aansluitdocumentatie-proeftuin---aansluitroute-2-middelenleverancier">'Aansluitdocumentatie proeftuin middelenleveranciers' (PDF, nl)</a>.
             </p>
         </div>
     </section>

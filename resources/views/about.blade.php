@@ -35,6 +35,11 @@
                 </thead>
                 <tbody>
                 <tr>
+                    <td>v1.0.2</td>
+                    <td>26-01-2024</td>
+                    <td>Verwijzing van "Aansluiten als middelenleverancier" documentatie toegevoegd</td>
+                </tr>
+                <tr>
                     <td>v1.0.1</td>
                     <td>24-01-2024</td>
                     <td>Verwijzing van "Aansluiten als platformleverancier" documentatie toegevoegd</td>
