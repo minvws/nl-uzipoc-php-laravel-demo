@@ -184,4 +184,9 @@ class UziUser implements Authenticatable
             . ($this->surnamePrefix ? " " . $this->surnamePrefix : "")
             . " " . $this->surname;
     }
+
+    public function hasRelations(): bool
+    {
+        return count($this->uras) > 0;
+    }
 }

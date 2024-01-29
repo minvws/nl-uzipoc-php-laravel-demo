@@ -42,6 +42,9 @@ Route::prefix('ziekenboeg')
         Route::middleware(['guest'])->group(function () {
             Route::get('login', [AuthController::class, 'login'])
                 ->name('login');
+
+            Route::get('no-relations', [AuthController::class, 'noRelations'])
+                ->name('auth.no-relations');
         });
 
         Route::middleware(['auth'])

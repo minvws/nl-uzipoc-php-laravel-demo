@@ -15,7 +15,7 @@
                 </p>
 
                 <p>
-                    De demo applicatie geeft aan welke gegevens  uit het proeftuin UZI-register zijn opgehaald voor de testidentiteit waarmee is ingelogd.
+                    De demo applicatie geeft aan welke gegevens uit het proeftuin UZI-register zijn opgehaald voor de testidentiteit waarmee is ingelogd.
                 </p>
 
                 <p>

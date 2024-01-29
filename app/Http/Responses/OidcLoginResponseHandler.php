@@ -38,6 +38,14 @@ class OidcLoginResponseHandler implements LoginResponseHandlerInterface
             throw new UziNoUziNumberException();
         }
 
+        if (!$user->hasRelations()) {
+            // Received user that has no relations to the Ziekenboeg
+            // We do not allow the user to login and show a message
+            return redirect()
+                ->route('ziekenboeg.auth.no-relations')
+                ->with('user', $user);
+        }
+
         Auth::setUser($user);
         return new RedirectResponse(route('ziekenboeg.users.home'));
     }
