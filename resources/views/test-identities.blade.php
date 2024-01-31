@@ -4,10 +4,10 @@
     <section>
         <div>
             <h1>Testidentiteiten en inlogmiddelen</h1>
-            <p>@lang('Omdat de proeftuin een testapplicatie is kunt u inloggen met een testidentiteit. De gekoppelde inlogmiddelen zijn alleen met testaccounts te gebruiken. Testaccounts (of UZI-testpassen) worden niet actief verstrekt aan derde partijen. Deze pagina bevat meer informatie over de testidentiteiten en de implementatie van de diverse inlogmiddelen op de proeftuin.')</p>
+            <p>Omdat de proeftuin een testapplicatie is kunt u inloggen met een testidentiteit. De gekoppelde inlogmiddelen zijn alleen met testaccounts te gebruiken. Testaccounts (of UZI-testpassen) worden niet actief verstrekt aan derde partijen. Deze pagina bevat meer informatie over de testidentiteiten en de implementatie van de diverse inlogmiddelen op de proeftuin.</p>
 
             <h2>Testidentiteiten</h2>
-            <p>Binnen de proeftuin wordt gebruik gemaakt van testidentiteiten om in te loggen via het vernieuwde UZI-stelsel. De testidentiteiten zijn zo opgesteld dat deze verschillende scenario's van arbeidsrelaties vertegenwoordigen. Na het inloggen in De Ziekenboeg—het fictieve zorgplatform van de proeftuin—is te zien welke gegevens uit het UZI-register zijn opgehaald.</p>
+            <p>Binnen de proeftuin wordt gebruik gemaakt van testidentiteiten om in te loggen via het vernieuwde UZI-stelsel. De testidentiteiten zijn volledig fictief en zo opgesteld dat deze verschillende scenario's van arbeidsrelaties vertegenwoordigen. Na het inloggen in De Ziekenboeg—het fictieve zorgplatform van de proeftuin—is te zien welke gegevens uit het UZI-register zijn opgehaald.</p>
 
             <h3>Beschikbare testidentiteiten</h3>
 
@@ -193,6 +193,19 @@
                     </div>
                 </li>
             </ul>
+
+            <h2>Inlogmiddelen</h2>
+
+            <p>De inlogmiddelen op de proeftuin werken alleen met testaccounts. Omdat de proeftuin een testomgeving is, kan het zijn dat de beschikbare inlogmiddelen niet werken. Daarnaast wordt de proeftuin ook gebruikt door leveranciers van inlogmiddelen die de integratie met UZI-Online willen testen. In de situatie dat er geen bruikbare inlogmiddelen zijn, kan het inloggen altijd worden getest door in te loggen met een testidentiteit.</p>
+
+            <h3>DigiD</h3>
+            <p>UZI-Online heeft een technisch werkende koppeling met DigiD als inlogmiddel. Op dit moment is ervoor gekozen om DigiD in de proeftuin uit te schakelen, omdat derden alleen gebruik kunnen maken van de productie-omgeving van DigiD. Dit werkt niet in combinatie met het UZI-register van de proeftuin. Op dit moment is er een DigiD Mock inlogmiddel, zodat het inloggen via DigiD wel nagebootst kan worden voor testdoeleinden.</p>
+
+            <h3>UZI-pas</h3>
+            <p>De proeftuin ondersteunt het inloggen met een UZI-testpas. Deze passen worden uitgegeven door het CIBG, maar worden niet actief verstrekt aan derden.</p>
+
+            <h3>Yivi</h3>
+            <p>De proeftuin ondersteunt het inloggen via de Yivi wallet app. Om Yivi te gebruiken als inlogmethode moet een Yivi kaartje worden geladen in de wallet app. Dat is nodig bij de eerste keer inloggen via Yivi.</p>
         </div>
     </section>
 @endsection
