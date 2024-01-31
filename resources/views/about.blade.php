@@ -35,19 +35,24 @@
                 </thead>
                 <tbody>
                 <tr>
+                    <td>v1.1.0</td>
+                    <td>31-1-2024</td>
+                    <td>Tekst aanpassingen op de testidentiteiten pagina en een "We kunnen u niet inloggen" pagina toegevoegd aan de ziekenboeg.</td>
+                </tr>
+                <tr>
                     <td>v1.0.2</td>
                     <td>26-01-2024</td>
-                    <td>Verwijzing van "Aansluiten als middelenleverancier" documentatie toegevoegd</td>
+                    <td>Verwijzing van "Aansluiten als middelenleverancier" documentatie toegevoegd.</td>
                 </tr>
                 <tr>
                     <td>v1.0.1</td>
                     <td>24-01-2024</td>
-                    <td>Verwijzing van "Aansluiten als platformleverancier" documentatie toegevoegd</td>
+                    <td>Verwijzing van "Aansluiten als platformleverancier" documentatie toegevoegd.</td>
                 </tr>
                 <tr>
                     <td>v1.0.0</td>
                     <td>04-12-2023</td>
-                    <td>Eerste release proeftuin</td>
+                    <td>Eerste release proeftuin.</td>
                 </tr>
                 </tbody>
             </table>
