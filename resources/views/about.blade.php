@@ -23,7 +23,7 @@
     <section>
         <div>
             <h2>Versiegeschiedenis</h2>
-            <p>De laatste update van de proeftuin was op 24-01-2024.</p>
+            <p>De laatste update van de proeftuin was op 31-01-2024.</p>
             <table class="version-history">
                 <caption>Versieoverzicht:</caption>
                 <thead>
@@ -36,7 +36,7 @@
                 <tbody>
                 <tr>
                     <td>v1.1.0</td>
-                    <td>31-1-2024</td>
+                    <td>31-01-2024</td>
                     <td>Tekst aanpassingen op de testidentiteiten pagina en een "We kunnen u niet inloggen" pagina toegevoegd aan de ziekenboeg.</td>
                 </tr>
                 <tr>
