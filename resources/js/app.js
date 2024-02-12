@@ -1,5 +1,3 @@
-import './bootstrap';
-
 // Import manon JS components
 import '@minvws/manon/accordion';
 import '@minvws/manon/collapsible';
