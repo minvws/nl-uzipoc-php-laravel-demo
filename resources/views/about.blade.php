@@ -23,7 +23,7 @@
     <section>
         <div>
             <h2>Versiegeschiedenis</h2>
-            <p>De laatste update van de proeftuin was op 31-01-2024.</p>
+            <p>De laatste update van de proeftuin was op 29-02-2024.</p>
             <table class="version-history">
                 <caption>Versieoverzicht:</caption>
                 <thead>
@@ -34,6 +34,11 @@
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
+                    <td>v1.2.0</td>
+                    <td>29-02-2024</td>
+                    <td>Documentatie van "Aansluiten als middelenleverancier" bijgewerkt.</td>
+                </tr>
                 <tr>
                     <td>v1.1.0</td>
                     <td>31-01-2024</td>

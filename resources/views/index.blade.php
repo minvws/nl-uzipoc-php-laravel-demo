@@ -55,10 +55,10 @@
             </p>
             <h3 id="route_2">Route 2: Aansluiten als middelenleverancier (in ontwikkeling)</h3>
             <p>
-                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op UZI-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/25/koppelvlakspecificatie-voor-middelenleveranciers">'Koppelvlakspecificatie voor middelenleveranciers' (PDF, nl)</a>.
+                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op UZI-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de <a href="https://www.gegevensuitwisselingindezorg.nl/uzi-middelen/publicaties/publicaties/2024/02/23/koppelvlakspecificatie-voor-middelenleveranciers">'Koppelvlakspecificatie voor middelenleveranciers' (PDF, nl)</a>.
             </p>
             <p>
-                Voor het koppelen van een inlogmiddel aan UZI-Online, raadpleeg de <a href="https://www.gegevensuitwisselingindezorg.nl/publicaties/publicaties/2024/01/25/aansluitdocumentatie-proeftuin---aansluitroute-2-middelenleverancier">'Aansluitdocumentatie proeftuin middelenleveranciers' (PDF, nl)</a>.
+                Voor het koppelen van een inlogmiddel aan UZI-Online, raadpleeg de <a href="https://www.gegevensuitwisselingindezorg.nl/uzi-middelen/publicaties/publicaties/2024/02/23/aansluitdocumentatie-proeftuin-middelenleveranciers">'Aansluitdocumentatie proeftuin middelenleveranciers' (PDF, nl)</a>.
             </p>
         </div>
     </section>

@@ -11,7 +11,7 @@
         </div>
         <div class="meta">
             <p>
-                Versie v1.1.0
+                Versie v1.2.0
             </p>
         </div>
     </div>
