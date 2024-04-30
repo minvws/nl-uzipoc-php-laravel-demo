@@ -16,7 +16,6 @@
     "Main navigation": "Hoofdnavigatie",
     "Organization": "Instantie",
     "Roles": "Rollen",
-    "Welcome to UZI Labs": "Welkom bij de proeftuin",
     "Environments": "Omgevingen",
     "Labs": "De proeftuin",
     "the health application": "de ziekenboeg",
@@ -27,6 +26,5 @@
     "This is a demo Health application": "Dit is een demo zorgapplicatie",
     "Do you have any questions?": "Heeft u vragen?",
     "Mail your questions to <a href=\"mailto::mail\">:mail</a>.": "Mail uw vragen naar <a href=\"mailto::mail\">:mail</a>.",
-    "UZI Labs": "de proeftuin",
     "Relations": "Relaties"
 }

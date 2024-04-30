@@ -9,7 +9,7 @@
                     @lang('Error')
                     @lang(403)
                 </h1>
-                <p>@lang('You are currently not in the UZI-pilot.<br>Do you want to join the UZI-pilot? Send an email with the request that you want to join the UZI-pilot to') <a href="mailto:info-uzi@minvws.nl">info-uzi@minvws.nl</a>.</p>
+                <p>U zit momenteel niet in de Dezi-pilot.</p>
 
                 <form method="post" action="{{ route('ziekenboeg.users.logout') }}" class="inline">
                     @csrf

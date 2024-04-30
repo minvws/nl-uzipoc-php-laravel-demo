@@ -7,7 +7,7 @@
             <div class="sticky-top">
                 <h3>Welkom bij De Ziekenboeg</h3>
 
-                <p>De Ziekenboeg is een fictief zorgplatform en dient als demo applicatie om het inloggen met UZI-Online te kunnen ervaren.</p>
+                <p>De Ziekenboeg is een fictief zorgplatform en dient als demo applicatie om het inloggen met Dezi-Online te kunnen ervaren.</p>
 
                 <p>
                     Klik op <b>“Inloggen medewerkers”</b> om verder te gaan.

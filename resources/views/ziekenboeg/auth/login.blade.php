@@ -6,10 +6,10 @@
             <div class="sticky-top">
                 <h3>Inloggen bij de Ziekenboeg</h3>
 
-                <p>De inlogpagina van De Ziekenboeg is een voorbeeld van hoe zorgplatforms UZI-Online kunnen aansluiten naast andere inlogmethoden.</p>
+                <p>De inlogpagina van De Ziekenboeg is een voorbeeld van hoe zorgplatforms Dezi-Online kunnen aansluiten naast andere inlogmethoden.</p>
 
                 <p>
-                    Klik op <b>“Inloggen met UZI-Online”</b> om verder te gaan.
+                    Klik op <b>“Inloggen met Dezi-Online”</b> om verder te gaan.
                 </p>
             </div>
             <div class="sticky-bottom">
@@ -56,9 +56,9 @@
                 </fieldset>
             </form>
 
-            <p>Of log in met UZI-Online:</p>
+            <p>Of log in met Dezi-Online:</p>
             <ul class="external-login">
-                <li><a href="{{ route('oidc.login') }}"><img src="{{ asset('img/login-methods/signin-method-logo.png') }}" alt="">@lang('Login with') UZI-Online <i class="icon icon-chevron-right icon-small"></i></a></li>
+                <li><a href="{{ route('oidc.login') }}"><img src="{{ asset('img/login-methods/signin-method-logo.png') }}" alt="">@lang('Login with') Dezi-Online <i class="icon icon-chevron-right icon-small"></i></a></li>
             </ul>
         </div>
     </section>

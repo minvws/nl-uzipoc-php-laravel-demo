@@ -12,10 +12,10 @@
 
     <section>
         <div>
-            <h1>@lang('About') @lang('UZI Labs')</h1>
+            <h1>@lang('About') de proeftuin</h1>
             <p class="emphasized">De proeftuin is een testomgeving voor applicatiebeheerders in de zorg en leveranciers van inlogmiddelen.</p>
 
-            <p>In de proeftuin kan het nieuwe UZI-stelsel dat we ontwikkelen worden getest. Platform- en Middelenleveranciers kunnen ervaren hoe inloggen via UZI-Online werkt en kunnen zelf aan de slag om een aansluiting op UZI-Online te maken.</p>
+            <p>In de proeftuin kan het nieuwe inlogstelsel voor zorgprofesstionals worden getest. Platform- en Middelenleveranciers kunnen ervaren hoe inloggen via Dezi-Online werkt en kunnen zelf aan de slag om een aansluiting op Dezi-Online te maken.</p>
             <p>De proeftuin is ontwikkeld door het Ministerie van Volksgezondheid, Welzijn en Sport. Het nieuwe stelsel is nog in ontwikkeling. Daarmee verandert ook de proeftuin de komende tijd. Op die manier testen we samen wat het beste werkt. Ondersteuning en onderhoud van de proeftuin geschiedt op best effort tijdens kantooruren.</p>
         </div>
     </section>
@@ -23,7 +23,7 @@
     <section>
         <div>
             <h2>Versiegeschiedenis</h2>
-            <p>De laatste update van de proeftuin was op 29-02-2024.</p>
+            <p>De laatste update van de proeftuin was op 29-04-2024.</p>
             <table class="version-history">
                 <caption>Versieoverzicht:</caption>
                 <thead>
@@ -34,6 +34,11 @@
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
+                    <td>v1.3.0</td>
+                    <td>29-04-2024</td>
+                    <td>Naamswijziging van UZI naar Dezi.</td>
+                </tr>
                 <tr>
                     <td>v1.2.0</td>
                     <td>29-02-2024</td>
@@ -79,7 +84,7 @@
     <section>
         <div>
             <h2>Contact</h2>
-            <p>Vragen over de proeftuin of het nieuwe UZI-stelsel kunnen worden gesteld via <a href="mailto:uzi-info@minvws.nl">uzi-info@minvws.nl</a>. De helpdesk is uitsluitend op werkdagen en tijdens kantooruren bereikbaar en biedt ondersteuning voor de proeftuin-omgeving op basis van best-effort.</p>
+            <p>Vragen over de proeftuin of het nieuwe inlogstelsel Dezi kunnen worden gesteld via <a href="mailto:info@dezi.nl">info@dezi.nl</a>.</p>
         </div>
     </section>
 @endsection
