@@ -51,17 +51,17 @@
             <h2>Aansluiten op de proeftuin</h2>
             <h3 id="route_1">Route 1: Aansluiten als platformleverancier</h3>
             <p>
-                De proeftuin maakt het voor platformleveranciers mogelijk om het inloggen via Dezi-Online te testen vanuit de applicaties die zij ontwikkelen. Dezi-Online is gebouwd volgens de OpenID Connect (OIDC) standaard, waardoor aansluiten relatief eenvoudig is. Technische informatie is te vinden in de <a href="https://www.dezi.nl/over-dezi/documenten/publicaties/2024/03/19/koppelvlak-specificatie-platformleveranciers">'Koppelvlak specificatie voor platformleveranciers' (PDF, nl)</a>.
+                De proeftuin maakt het voor platformleveranciers mogelijk om het inloggen via Dezi-Online te testen vanuit de applicaties die zij ontwikkelen. Dezi-Online is gebouwd volgens de OpenID Connect (OIDC) standaard, waardoor aansluiten relatief eenvoudig is. Technische informatie is te vinden in de <a href="https://www.dezi.nl/aansluiten/documenten/publicaties/2024/05/08/koppelvlakspecificatie-dezi-online-koppelvlak-1_-platformleverancier">'Koppelvlak specificatie voor platformleveranciers' (PDF, nl)</a>.
             </p>
             <p>
-                Voor het koppelen van een zorgplatform met Dezi-Online, raadpleeg de <a href="https://www.dezi.nl/over-dezi/documenten/publicaties/2024/03/19/aansluitdocumentatie-proeftuin-platformleveranciers">'Aansluitdocumentatie proeftuin voor platformleveranciers' (PDF, nl)</a>.
+                Voor het koppelen van een zorgplatform met Dezi-Online, raadpleeg de <a href="https://www.dezi.nl/aansluiten/documenten/publicaties/2024/05/08/aansluitdocument-proeftuin---platformleverancier">'Aansluitdocumentatie proeftuin voor platformleveranciers' (PDF, nl)</a>.
             </p>
             <h3 id="route_2">Route 2: Aansluiten als middelenleverancier (in ontwikkeling)</h3>
             <p>
-                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op Dezi-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de <a href="https://www.dezi.nl/over-dezi/documenten/publicaties/2024/03/19/koppelvlakspecificatie-voor-middelenleveranciers">'Koppelvlakspecificatie voor middelenleveranciers' (PDF, nl)</a>.
+                De proeftuin maakt het voor leveranciers van (zorgspecifieke) inlogmiddelen mogelijk om aangesloten te worden op Dezi-Online. Deze aansluiting kan vervolgens in ‘De Ziekenboeg’ worden getest. Technische informatie is te vinden in de <a href="https://www.dezi.nl/aansluiten/documenten/publicaties/2024/05/08/koppelvlakspecificatie-dezi-online-koppelvlak-2_-middelenleverancier">'Koppelvlakspecificatie voor middelenleveranciers' (PDF, nl)</a>.
             </p>
             <p>
-                Voor het koppelen van een inlogmiddel aan Dezi-Online, raadpleeg de <a href="https://www.dezi.nl/over-dezi/documenten/publicaties/2024/03/19/aansluitdocumentatie-proeftuin-middelenleveranciers">'Aansluitdocumentatie proeftuin middelenleveranciers' (PDF, nl)</a>.
+                Voor het koppelen van een inlogmiddel aan Dezi-Online, raadpleeg de <a href="https://www.dezi.nl/aansluiten/documenten/publicaties/2024/05/08/aansluitdocument-proeftuin---middelenleverancier">'Aansluitdocumentatie proeftuin middelenleveranciers' (PDF, nl)</a>.
             </p>
         </div>
     </section>
