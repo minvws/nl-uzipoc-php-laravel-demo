@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   composer-install:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     strategy:
       max-parallel: 3
@@ -38,23 +38,12 @@ jobs:
   laravel-tests:
     needs:
       - composer-install
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     strategy:
       max-parallel: 3
       matrix:
         php-versions: [ '8.2', '8.3' ]
-
-    services:
-      postgres:
-        image: postgres:12.5
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: ci_db_test
-        ports:
-          - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
     - uses: actions/checkout@v4
@@ -62,7 +51,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
-        extensions: xdebug, pgsql
+        extensions: xdebug
     - uses: actions/cache@v4
       with:
         path: vendor/
