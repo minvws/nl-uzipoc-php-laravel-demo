@@ -96,13 +96,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpstan
       - name: Copy .env
         run: cp -n .env.example .env
       - name: Generate key
         run: php artisan key:generate
       - name: Static analysis with PHPStan
-        run: phpstan analyse
+        run: vendor/bin/phpstan analyse
     strategy:
       max-parallel: 3
       matrix:

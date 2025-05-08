@@ -15,7 +15,7 @@ class OidcLoginController extends LoginController
     {
         // This redirects to the client and handles the redirect back
         $acmeTokens = $request->query('acme_tokens');
-        if ($acmeTokens && is_string($acmeTokens)) {
+        if (is_string($acmeTokens)) {
             try {
                 $this->client->addAuthParam(
                     ['claims' => json_encode(['acme_tokens' => explode(",", $acmeTokens)], JSON_THROW_ON_ERROR)]
