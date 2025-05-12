@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f5ac8e65fd11dadfb19fe0d52792538",
+    "content-hash": "af819b5a612fea1b65f6a22a1359ac07",
     "packages": [
         {
             "name": "brick/math",
@@ -1867,33 +1867,33 @@
         },
         {
             "name": "minvws/openid-connect-php-laravel",
-            "version": "v0.3.1",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minvws/nl-rdo-openid-connect-php-laravel.git",
-                "reference": "bc12c0fb9fd1d06b8a52b1b9da64e38b5f8ec1ad"
+                "reference": "40821d6be08fdd2e60119341d6273569fa3e3ab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minvws/nl-rdo-openid-connect-php-laravel/zipball/bc12c0fb9fd1d06b8a52b1b9da64e38b5f8ec1ad",
-                "reference": "bc12c0fb9fd1d06b8a52b1b9da64e38b5f8ec1ad",
+                "url": "https://api.github.com/repos/minvws/nl-rdo-openid-connect-php-laravel/zipball/40821d6be08fdd2e60119341d6273569fa3e3ab7",
+                "reference": "40821d6be08fdd2e60119341d6273569fa3e3ab7",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.5",
-                "illuminate/contracts": "^10.0||^11.0",
+                "illuminate/contracts": "^10.0||^11.0||^12.0",
                 "jumbojett/openid-connect-php": "^1.0.2",
                 "php": ">=8.1",
                 "web-token/jwt-library": "^3.4"
             },
             "require-dev": {
                 "ext-openssl": "*",
-                "orchestra/testbench": "^8.0||^9.0",
+                "orchestra/testbench": "^8.0||^9.0||^10.0",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^10.0",
+                "phpunit/phpunit": "^10.0||^11.0||^12.0",
                 "slevomat/coding-standard": "^8.14",
                 "squizlabs/php_codesniffer": "^3.8",
-                "vimeo/psalm": "^5.8"
+                "vimeo/psalm": "^5.8||^6.0"
             },
             "type": "library",
             "extra": {
@@ -1921,9 +1921,9 @@
             "description": "OpenID Connect client for Laravel",
             "support": {
                 "issues": "https://github.com/minvws/nl-rdo-openid-connect-php-laravel/issues",
-                "source": "https://github.com/minvws/nl-rdo-openid-connect-php-laravel/tree/v0.3.1"
+                "source": "https://github.com/minvws/nl-rdo-openid-connect-php-laravel/tree/v0.4.0"
             },
-            "time": "2025-02-11T12:03:33+00:00"
+            "time": "2025-05-12T13:32:32+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -11055,5 +11055,5 @@
     "platform-overrides": {
         "php": "8.1.0"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
