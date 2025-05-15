@@ -139,6 +139,16 @@ class UziUser implements Authenticatable
     }
 
     /**
+     * Get the name of the password attribute for the user.
+     *
+     * @return string
+     */
+    public function getAuthPasswordName()
+    {
+        throw new RuntimeException("Uzi uses can't have a password");
+    }
+
+    /**
      * Get the token value for the "remember me" session.
      *
      * @return string
