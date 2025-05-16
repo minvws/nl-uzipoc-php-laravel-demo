@@ -135,7 +135,7 @@ class UziUser implements Authenticatable
      */
     public function getAuthPassword(): string
     {
-        throw new RuntimeException("Uzi uses can't have a password");
+        throw new RuntimeException("Uzi users can't have a password");
     }
 
     /**
@@ -145,7 +145,7 @@ class UziUser implements Authenticatable
      */
     public function getAuthPasswordName()
     {
-        throw new RuntimeException("Uzi uses can't have a password");
+        throw new RuntimeException("Uzi users can't have a password");
     }
 
     /**
