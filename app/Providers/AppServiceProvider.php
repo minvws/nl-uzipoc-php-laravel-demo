@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Services\Uzi\UziAuthGuard;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -32,6 +35,15 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::if('notZiekenboegUsersPage', function () {
             return !request()->is('ziekenboeg/users/*');
+        });
+
+        $this->bootAuth();
+    }
+
+    public function bootAuth(): void
+    {
+        Auth::extend('oidc', function (Application $app, string $name, array $config) {
+            return new UziAuthGuard($app->make('session')->driver());
         });
     }
 }

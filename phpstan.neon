@@ -10,6 +10,3 @@ parameters:
         - routes
     level: 8
     generalizeEnvReturnType: true
-    excludePaths:
-        - public/index.php
-        - routes/console.php
