@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -17,6 +18,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->appendToGroup('web', [
             \App\Http\Middleware\Locale::class,
         ]);
+        $middleware->redirectUsersTo(fn (Request $request) => route('ziekenboeg.users.home'));
+        $middleware->redirectGuestsTo(fn (Request $request) => route('ziekenboeg.login'));
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->reportable(
