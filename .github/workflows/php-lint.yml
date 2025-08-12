@@ -19,7 +19,7 @@ jobs:
       matrix:
         php-versions: [ '8.3', '8.4' ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/cache@v4
         with:
           path: vendor/
@@ -40,7 +40,7 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/cache@v4
         with:
           path: vendor/
@@ -64,7 +64,7 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/cache@v4
         with:
           path: vendor/
@@ -86,7 +86,7 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/cache@v4
         with:
           path: vendor/
@@ -112,7 +112,7 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/cache@v4
         with:
           path: vendor/
