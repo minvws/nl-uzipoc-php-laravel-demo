@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 APP_DIR=${APP_DIR:-/app}
 
 # Needs to be 0.0.0.0 for Docker
@@ -9,6 +11,25 @@ ARTISAN_SERVE_PORT=8000
 ARTISAN_SERVE_NO_RELOAD=${ARTISAN_SERVE_NO_RELOAD:-true}
 
 cd $APP_DIR
+
+echo "----------------------------------------------"
+echo " Do not run this on a production environment! "
+echo "----------------------------------------------"
+echo ""
+echo "This image is not suitable for: "
+echo " - a production environment;"
+echo " - an environment that contains sensitive information;"
+echo " - an environment that should remain secure."
+echo ""
+
+_DO_NOT_USE_ON_PRODUCTION="I'm a fool if I run this application on a production environment."
+
+if [ "$DO_NOT_USE_ON_PRODUCTION" != "$_DO_NOT_USE_ON_PRODUCTION" ]; then
+  echo "If you want to continue, set the \"DO_NOT_USE_ON_PRODUCTION\" variable"
+  echo " to \"$_DO_NOT_USE_ON_PRODUCTION\""
+  echo ""
+  exit 1
+fi
 
 # check if secrets directory exists
 if [ ! -d $APP_DIR/secrets ]; then
@@ -50,6 +71,9 @@ if [ "$ARTISAN_SERVE_NO_RELOAD" = "true" ]; then
   ARTISAN_NO_RELOAD_ARGUMENT='--no-reload'
 fi
 
-# run the application
-# FYI: you should not use php artisan serve in production
+echo "--------------------------------------------"
+echo "Starting php artisan serve"
+echo "This is insecure and should not be used in production!"
+echo "--------------------------------------------"
+
 php artisan serve --host=$ARTISAN_SERVE_HOST --port=$ARTISAN_SERVE_PORT $ARTISAN_NO_RELOAD_ARGUMENT

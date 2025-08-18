@@ -1,5 +1,5 @@
 # Dockerfile
-FROM php:8.3.2-cli
+FROM php:8.3-cli
 
 RUN apt-get update -y \
   && apt-get install -y libmcrypt-dev libzip-dev libgmp3-dev \
