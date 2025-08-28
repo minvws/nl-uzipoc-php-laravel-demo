@@ -9,6 +9,7 @@ ARTISAN_SERVE_HOST=0.0.0.0
 # Needs to be the port that is exposed in the Dockerfile
 ARTISAN_SERVE_PORT=8000
 ARTISAN_SERVE_NO_RELOAD=${ARTISAN_SERVE_NO_RELOAD:-true}
+APP_ENV=${APP_ENV:-local}
 
 cd $APP_DIR
 
