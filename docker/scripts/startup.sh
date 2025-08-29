@@ -9,7 +9,6 @@ ARTISAN_SERVE_HOST=0.0.0.0
 # Needs to be the port that is exposed in the Dockerfile
 ARTISAN_SERVE_PORT=8000
 ARTISAN_SERVE_NO_RELOAD=${ARTISAN_SERVE_NO_RELOAD:-true}
-APP_ENV=${APP_ENV:-local}
 
 cd $APP_DIR
 
@@ -63,6 +62,9 @@ if [ ! -f $APP_DIR/.env ]; then
     # generate APP_KEY
     APP_KEY="base64:$(openssl rand -base64 32)"
     export APP_KEY
+
+    APP_ENV=${APP_ENV:-local}
+    export APP_ENV
 fi
 
 # set no reload argument if ARTISAN_SERVE_NO_RELOAD is set to true
