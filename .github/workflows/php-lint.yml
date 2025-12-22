@@ -19,8 +19,8 @@ jobs:
       matrix:
         php-versions: [ '8.3', '8.4' ]
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -40,8 +40,8 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -64,8 +64,8 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -86,8 +86,8 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -112,8 +112,8 @@ jobs:
       - composer-install
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}

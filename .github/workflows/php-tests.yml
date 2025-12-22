@@ -19,8 +19,8 @@ jobs:
       matrix:
         php-versions: [ '8.3', '8.4' ]
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/cache@v4
+      - uses: actions/checkout@v6
+      - uses: actions/cache@v5
         with:
           path: vendor/
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -44,13 +44,13 @@ jobs:
         php-versions: [ '8.3', '8.4' ]
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Install PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
         extensions: xdebug
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5
       with:
         path: vendor/
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
