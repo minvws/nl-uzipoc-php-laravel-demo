@@ -8,6 +8,7 @@ use App\Services\Uzi\UziAuthGuard;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -30,11 +31,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Blade::if('isZiekenboegUsersPage', function () {
-            return request()->is('ziekenboeg/users/*');
+            return Route::is('ziekenboeg.users.*');
         });
 
         Blade::if('notZiekenboegUsersPage', function () {
-            return !request()->is('ziekenboeg/users/*');
+            return !Route::is('ziekenboeg.users.*');
         });
 
         $this->bootAuth();
