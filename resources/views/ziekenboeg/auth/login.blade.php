@@ -14,11 +14,19 @@
             </div>
             <div class="sticky-bottom">
                 <ul>
-                    <li>
-                        <a href="{{ route('index') }}" class="back-to-proeftuin">
-                            Terug naar de Proeftuin hoofdpagina
-                        </a>
-                    </li>
+                    @if(\Illuminate\Support\Facades\Route::has('index'))
+                        <li>
+                            <a href="{{ route('index') }}" class="back-to-proeftuin">
+                                Terug naar de Proeftuin hoofdpagina
+                            </a>
+                        </li>
+                    @elseif(\Illuminate\Support\Facades\Route::has('ziekenboeg.home'))
+                        <li>
+                            <a href="{{ route('ziekenboeg.home') }}" class="back-to-proeftuin">
+                                Terug naar de {{ config('app.name') }} hoofdpagina
+                            </a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

@@ -9,8 +9,22 @@ use Illuminate\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__.'/../routes/web.php',
         health: '/up',
+        then: function () {
+            // Always load OIDC routes
+            Route::middleware('web')
+                ->group(base_path('routes/oidc.php'));
+
+            // In 'ziekenboeg' mode, only load the ziekenboeg routes
+            if (Config::string('app.mode') === 'ziekenboeg') {
+                Route::middleware('web')
+                    ->group(base_path('routes/web-ziekenboeg.php'));
+                return;
+            }
+
+            Route::middleware('web')
+                ->group(base_path('routes/web.php'));
+        },
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->trustHosts(static function (): array {

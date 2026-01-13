@@ -7,8 +7,6 @@ use App\Http\Controllers\TestIdentitiesController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PrivacyStatementController;
-use App\Http\Controllers\Ziekenboeg\Auth\AuthController;
-use App\Http\Controllers\Ziekenboeg\Auth\OidcLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,35 +30,4 @@ Route::get('about', AboutController::class)->name('about');
 Route::get('test-identities', TestIdentitiesController::class)->name('test-identities');
 
 Route::prefix('ziekenboeg')
-    ->name('ziekenboeg.')
-    ->group(function () {
-        Route::redirect('/', '/ziekenboeg/home');
-        Route::get('home', \App\Http\Controllers\Ziekenboeg\HomeController::class)->name('home');
-        Route::get('about', \App\Http\Controllers\Ziekenboeg\AboutController::class)->name('about');
-        Route::get('contact', \App\Http\Controllers\Ziekenboeg\ContactController::class)->name('contact');
-
-        Route::middleware(['guest'])->group(function () {
-            Route::get('login', [AuthController::class, 'login'])
-                ->name('login');
-
-            Route::get('no-relations', [AuthController::class, 'noRelations'])
-                ->name('auth.no-relations');
-        });
-
-        Route::middleware(['auth'])
-            ->prefix('users')
-            ->name('users.')
-            ->group(function () {
-                Route::get('home', [\App\Http\Controllers\Ziekenboeg\Users\HomeController::class, 'home'])
-                    ->name('home');
-
-                Route::get('jwt', \App\Http\Controllers\Ziekenboeg\Users\JwtController::class)
-                    ->name('jwt');
-
-                Route::post('logout', [AuthController::class, 'logout'])
-                    ->name('logout');
-            });
-    });
-
-Route::get('oidc/login', OidcLoginController::class)
-    ->name('oidc.login');
+    ->group(base_path('routes/web-ziekenboeg.php'));

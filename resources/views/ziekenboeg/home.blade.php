@@ -15,11 +15,13 @@
             </div>
             <div class="sticky-bottom">
                 <ul>
-                    <li>
-                        <a href="{{ route('index') }}" class="back-to-proeftuin">
-                            Terug naar de Proeftuin hoofdpagina
-                        </a>
-                    </li>
+                    @if(\Illuminate\Support\Facades\Route::has('index'))
+                        <li>
+                            <a href="{{ route('index') }}" class="back-to-proeftuin">
+                                Terug naar de Proeftuin hoofdpagina
+                            </a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
