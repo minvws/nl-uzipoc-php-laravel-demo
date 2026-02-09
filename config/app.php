@@ -17,6 +17,17 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Force HTTPS
+    |--------------------------------------------------------------------------
+    | If this option is set to true, the application will force all URLs to use
+    | the HTTPS scheme.
+    */
+    'force_https' => env('FORCE_HTTPS', false),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Mode
