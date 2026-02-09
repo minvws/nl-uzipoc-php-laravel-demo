@@ -27,7 +27,7 @@ jobs:
 
       - run: npm ci --ignore-scripts
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.REPO_READ_ONLY_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build assets through npm
         run: npm run build
