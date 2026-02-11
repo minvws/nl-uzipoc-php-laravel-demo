@@ -1,18 +1,29 @@
-# Dockerfile
-FROM php:8.3-cli
+FROM php:8.3-fpm
 
-RUN apt-get update -y \
-  && apt-get install -y libmcrypt-dev libzip-dev libgmp3-dev \
-  && apt-get clean \
-	&& docker-php-ext-install bcmath gmp zip \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip \
+    libzip-dev \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install zip pdo_mysql mbstring exif pcntl bcmath gd
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-WORKDIR /app
-COPY . /app
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-RUN composer install --no-dev --no-interaction --no-progress --no-suggest --no-scripts --optimize-autoloader
+WORKDIR /var/www/html
 
-EXPOSE 8000
-CMD /app/docker/scripts/startup.sh
+COPY . .
+
+RUN composer install --optimize-autoloader --no-dev && \
+    chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+EXPOSE 80
+
+CMD ["/usr/local/bin/entrypoint.sh"]
