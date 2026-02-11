@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 
-php artisan serve --host=0.0.0.0 --port=80
+php-fpm -D
+nginx -g 'daemon off;'

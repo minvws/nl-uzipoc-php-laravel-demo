@@ -9,11 +9,13 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     libzip-dev \
+    nginx \
     && docker-php-ext-configure zip \
     && docker-php-ext-install zip pdo_mysql mbstring exif pcntl bcmath gd
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+COPY docker/nginx.conf /etc/nginx/sites-available/default
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
