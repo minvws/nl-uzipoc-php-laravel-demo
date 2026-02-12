@@ -1,18 +1,40 @@
-# Dockerfile
-FROM php:8.3-cli
+FROM php:8.3-apache AS builder
 
-RUN apt-get update -y \
-  && apt-get install -y libmcrypt-dev libzip-dev libgmp3-dev \
-  && apt-get clean \
-	&& docker-php-ext-install bcmath gmp zip \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+RUN apt-get update && apt-get install -y \
+    libzip-dev libmcrypt-dev libgmp3-dev \
+    zip \
+    unzip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install pdo_mysql bcmath gmp zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-WORKDIR /app
-COPY . /app
+WORKDIR /var/www/html
 
-RUN composer install --no-dev --no-interaction --no-progress --no-suggest --no-scripts --optimize-autoloader
+COPY composer.json composer.lock ./
 
-EXPOSE 8000
-CMD /app/docker/scripts/startup.sh
+RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
+
+COPY . .
+
+RUN composer dump-autoload --optimize --no-dev
+
+FROM php:8.3-apache
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libzip-dev libmcrypt-dev libgmp3-dev \
+    && docker-php-ext-install pdo_mysql bcmath gmp zip \
+    && a2enmod rewrite \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
+    && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+WORKDIR /var/www/html
+
+COPY --from=builder --chown=www-data:www-data /var/www/html /var/www/html
+
+EXPOSE 80
+
+USER www-data
