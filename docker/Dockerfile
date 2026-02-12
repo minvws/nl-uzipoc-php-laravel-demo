@@ -21,10 +21,15 @@ RUN composer dump-autoload --optimize --no-dev
 
 FROM php:8.3-apache
 
+ARG PORT=8080
+ENV PORT=$PORT
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libzip-dev libmcrypt-dev libgmp3-dev \
     && docker-php-ext-install pdo_mysql bcmath gmp zip \
     && a2enmod rewrite \
+    && sed -ri -e 's/^Listen 80$/Listen ${PORT}/' /etc/apache2/ports.conf \
+    && sed -ri -e 's/:80>/:${PORT}>/g' /etc/apache2/sites-available/*.conf \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
@@ -35,6 +40,6 @@ WORKDIR /var/www/html
 
 COPY --from=builder --chown=www-data:www-data /var/www/html /var/www/html
 
-EXPOSE 80
+EXPOSE ${PORT}
 
 USER www-data
