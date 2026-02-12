@@ -10,9 +10,9 @@
         "minvws/openid-connect-php-laravel": "^0.4.0"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "*",
         "barryvdh/laravel-ide-helper": "^3.5",
         "fakerphp/faker": "^1.23",
+        "fruitcake/laravel-debugbar": "^4.0",
         "jorijn/laravel-security-checker": "^2.6",
         "larastan/larastan": "^3.4",
         "laravel/pail": "^1.2.2",
