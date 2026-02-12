@@ -5,6 +5,7 @@ vendor
 tests
 secrets/*
 storage/logs/*
+bootstrap/cache/*
 storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
