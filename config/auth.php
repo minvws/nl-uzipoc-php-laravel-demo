@@ -99,4 +99,6 @@ return [
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
+
+    'minimum_loa' => env('MINIMUM_LOA', 'http://eidas.europa.eu/LoA/substantial'),
 ];

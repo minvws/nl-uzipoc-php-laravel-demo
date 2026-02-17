@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Uzi;
+namespace App\Models;
 
-use App\Models\UziRelationRole;
 use Illuminate\Support\Facades\Log;
 
-class UziRoleService
+class RoleService
 {
     public const ROLES = [
         "01.000" => "Arts",
@@ -94,7 +93,7 @@ class UziRoleService
         "99.000" => "Zorgverlener andere zorg",
     ];
 
-    public function getRoleName(string $roleCode): string
+    public static function getRoleName(string $roleCode): string
     {
         $roleName = self::ROLES[$roleCode] ?? null;
         if ($roleName === null) {
@@ -102,21 +101,5 @@ class UziRoleService
             return $roleCode;
         }
         return $roleName;
-    }
-
-    /**
-     * @param string[] $roleCodes
-     * @return UziRelationRole[]
-     */
-    public function getRolesByCodes(array $roleCodes): array
-    {
-        $roles = [];
-        foreach ($roleCodes as $roleCode) {
-            $roles[] = new UziRelationRole(
-                code: $roleCode,
-                name: $this->getRoleName($roleCode),
-            );
-        }
-        return $roles;
     }
 }
