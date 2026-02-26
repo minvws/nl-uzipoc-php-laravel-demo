@@ -1,11 +1,6 @@
 # https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
 
 version: 2
-registries:
-  npm-github:
-    type: npm-registry
-    url: https://npm.pkg.github.com
-    token: ${{ secrets.GITHUB_TOKEN }}
 
 updates:
   # Maintain dependencies for GitHub Actions
@@ -23,8 +18,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    registries:
-      - npm-github
     open-pull-requests-limit: 5
     groups:
       production-dependencies:
