@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Models;
+namespace App\Models\Uzi;
 
 use App\Exceptions\UziNoUziNumberException;
-use App\Services\Uzi\UziRoleService;
 use Exception;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Contracts\Auth\Authenticatable;
-use RuntimeException;
+use App\Models\AbstractUserBase;
+use App\Models\RoleService;
 
-class UziUser implements Authenticatable
+class UziUser extends AbstractUserBase
 {
     /**
      * @param string|null $initials
@@ -31,7 +30,7 @@ class UziUser implements Authenticatable
         public string|null $loaAuthn,
         public string $loaUzi,
         public array $uras,
-        public string $email = ''
+        public string $email = '',
     ) {
         if (empty($email)) {
             $this->email = $uziId . '@uzi.pas';
@@ -50,7 +49,7 @@ class UziUser implements Authenticatable
      * } $oidcResponse
      * @throws UziNoUziNumberException
      */
-    public static function deserializeFromObject(object $oidcResponse): ?UziUser
+    public static function deserializeFromObject(object $oidcResponse): UziUser
     {
         $requiredKeys = ["relations", "initials", "surname", "surname_prefix", "uzi_id", "loa_uzi"];
         $missingKeys = [];
@@ -59,13 +58,12 @@ class UziUser implements Authenticatable
                 $missingKeys[] = $key;
             }
         }
-        if (count($missingKeys) > 0) {
+        if (!empty($missingKeys)) {
             Log::error("Uzi user missing required fields: " . implode(", ", $missingKeys));
             throw new UziNoUziNumberException();
         }
 
 
-        $roleService = new UziRoleService();
         $uras = [];
         try {
             foreach ($oidcResponse->relations ?? [] as $ura) {
@@ -78,8 +76,7 @@ class UziUser implements Authenticatable
                     continue;
                 }
 
-                $roles = $roleService->getRolesByCodes($ura->roles);
-                $uras[] = new UziRelation($ura->entity_name, $ura->ura, $roles);
+                $uras[] = new UziRelation($ura->entity_name, $ura->ura, self::getRolesByCodes($ura->roles));
             }
 
             return new UziUser(
@@ -94,109 +91,41 @@ class UziUser implements Authenticatable
         } catch (Exception $e) {
             report($e);
             Log::error("Trying to build an uzi user from userinfo failed", [$e]);
-            return null;
+            throw new UziNoUziNumberException();
         }
     }
 
     /**
-     * Get the name of the unique identifier for the user.
-     *
-     * @return string
+     * @param string[] $roleCodes
+     * @return UziRelationRole[]
      */
+    public static function getRolesByCodes(array $roleCodes): array
+    {
+        $roles = [];
+        foreach ($roleCodes as $roleCode) {
+            $roles[] = new UziRelationRole(
+                code: $roleCode,
+                name: RoleService::getRoleName($roleCode),
+            );
+        }
+        return $roles;
+    }
+
     public function getName(): string
-    {
-        return $this->initials . " " . $this->surnamePrefix . " " . $this->surname;
-    }
-
-    /**
-     * Get the name of the unique identifier for the user.
-     *
-     * @return string
-     */
-    public function getAuthIdentifierName(): string
-    {
-        return $this->uziId;
-    }
-
-    /**
-     * Get the unique identifier for the user.
-     *
-     * @return string
-     */
-    public function getAuthIdentifier(): string
-    {
-        return $this->uziId;
-    }
-
-    /**
-     * Get the password for the user.
-     *
-     * @return string
-     */
-    public function getAuthPassword(): string
-    {
-        throw new RuntimeException("Uzi users can't have a password");
-    }
-
-    /**
-     * Get the name of the password attribute for the user.
-     *
-     * @return string
-     */
-    public function getAuthPasswordName()
-    {
-        throw new RuntimeException("Uzi users can't have a password");
-    }
-
-    /**
-     * Get the token value for the "remember me" session.
-     *
-     * @return string
-     */
-    public function getRememberToken(): string
-    {
-        throw new RuntimeException("Do not remember cookie's");
-    }
-
-    /**
-     * Set the token value for the "remember me" session.
-     *
-     * @param  string $value
-     * @return void
-     */
-    public function setRememberToken($value): void
-    {
-        throw new RuntimeException("Do not remember cookie's");
-    }
-
-    /**
-     * Get the column name for the "remember me" token.
-     *
-     * @return string
-     */
-    public function getRememberTokenName(): string
-    {
-        throw new RuntimeException("Do not remember cookie's");
-    }
-
-    public function hasUziId(): bool
-    {
-        return !empty($this->uziId);
-    }
-
-    public function getDisplayName(): string
     {
         if (empty($this->initials) || empty($this->surname)) {
             return $this->uziId;
         }
-
-        return $this->initials
-            . ($this->surnamePrefix ? " " . $this->surnamePrefix : "")
-            . " " . $this->surname;
+        return $this->initials . ($this->surnamePrefix ? " " . $this->surnamePrefix : "") . " " . $this->surname;
     }
 
     public function hasRelations(): bool
     {
         return count($this->uras) > 0;
+    }
+
+    public function getAuthIdentifier(): string
+    {
+        return $this->uziId;
     }
 }

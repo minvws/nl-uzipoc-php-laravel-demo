@@ -52,51 +52,68 @@
     </section>
 
     <section>
-        <div>
-            <h2>Gegevens</h2>
-            <dl>
+    <div>
+        <h2>Gegevens</h2>
+        <dl>
+            @foreach($user->toArray() as $key => $value)
                 <div>
-                    <dt>Initialen</dt>
-                    <dd>{{ $user->initials }}</dd>
+                    <dt>{{ $key }}</dt>
+                    <dd>
+                        @if(is_array($value))
+                            <x-recursive-array :data="$value" />
+                        @else
+                            {{ $value }}
+                        @endif
+                    </dd>
                 </div>
-                <div>
-                    <dt>Tussenvoegsel</dt>
-                    <dd>{{ $user->surnamePrefix }}</dd>
-                </div>
-                <div>
-                    <dt>Achternaam</dt>
-                    <dd>{{ $user->surname }}</dd>
-                </div>
-                <div>
-                    <dt>UZI-nummer</dt>
-                    <dd>{{ $user->uziId }}</dd>
-                </div>
-                <div>
-                    <dt>Level of Assurance</dt>
-                    <dd>{{ $user->loaAuthn }}</dd>
-                </div>
-            </dl>
-
-            <h3>@lang('Relations')</h3>
-            @foreach($user->uras as $key => $ura)
-                <b>Relatie {{ $key + 1 }}</b>
-                <dl>
-                    <div>
-                        <dt>Organisatie</dt>
-                        <dd>{{ $ura->entityName }}</dd>
-                    </div>
-                    <div>
-                        <dt>URA</dt>
-                        <dd>{{ $ura->ura }}</dd>
-                    </div>
-                    <div>
-                        <dt>Rolcodes</dt>
-                        <dd>@foreach($ura->roles as $role)
-                                {{ $role->code }} ({{$role->name}}) <br>
-                            @endforeach</dd>
-                    </div>
-                </dl>
             @endforeach
-        </div>
-    </section>
+        </dl>
+    </div>
+</section>
+
+@if($user instanceof \App\Models\Dezi\DeziUser)
+<section>
+    <div>
+        <h2>Verklaring gegevens</h2>
+        <dl>
+            @foreach((array)$user->declaration as $key => $value)
+                <div>
+                    <dt>{{ $key }}</dt>
+                    <dd>
+                        @if(is_array($value))
+                            <x-recursive-array :data="$value" />
+                        @else
+                            {{ $value }}
+                        @endif
+                    </dd>
+                </div>
+            @endforeach
+        </dl>
+    </div>
+</section>
+@endif
+
+<section>
+    <div>
+        <h2>Userinfo JWT</h2>
+        <pre><code id="jwt-token">{{ $user->getJwt() }}</code></pre>
+        <button type="button" onclick="
+            navigator.clipboard.writeText(document.getElementById('jwt-token').textContent);
+            this.textContent = 'Gekopieerd!';
+            setTimeout(() => this.textContent = 'Kopieer', 2000);
+        ">Kopieer</button>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2>JSON-encoded Userinfo JWT</h2>
+        <button type="button" onclick="
+            navigator.clipboard.writeText(document.getElementById('jwt-json').textContent);
+            this.textContent = 'Gekopieerd!';
+            setTimeout(() => this.textContent = 'Kopieer', 2000);
+        ">Kopieer</button>
+        <pre><code id="jwt-json">{{ $user->getJwt(true) }}</code></pre>
+    </div>
+</section>
 @endsection

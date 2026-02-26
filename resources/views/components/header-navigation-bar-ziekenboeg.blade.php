@@ -59,7 +59,7 @@
             @isZiekenboegUsersPage
             @auth
                 <li>
-                    <div>Ingelogd als: {{ auth()->user()->getDisplayName() }} | <x-header-logout-button/></div>
+                    <div>Ingelogd als: {{ auth()->user()->getName() }} | <x-header-logout-button/></div>
                 </li>
             @endauth
             @endisZiekenboegUsersPage
