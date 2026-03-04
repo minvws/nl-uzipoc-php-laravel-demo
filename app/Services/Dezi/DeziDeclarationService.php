@@ -26,7 +26,7 @@ final class DeziDeclarationService
         $this->claimChecker = new ClaimCheckerManager([
             new ExpirationTimeChecker(),
             new NotBeforeChecker(),
-            new IssuerChecker([Config::get('oidc.issuer')]),
+            new IssuerChecker(array_filter([Config::get('oidc.issuer'), Config::get('dezi.issuer')])),
         ]);
     }
 
