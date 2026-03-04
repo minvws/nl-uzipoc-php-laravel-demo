@@ -25,7 +25,7 @@ final class DeziDeclarationService
         $this->minimumLoa = OidcUserLoa::from(Config::get('auth.minimum_loa'));
         $this->claimChecker = new ClaimCheckerManager([
             new ExpirationTimeChecker(),
-            new NotBeforeChecker(),
+            new NotBeforeChecker(allowedTimeDrift: 10),
             new IssuerChecker(array_filter([Config::get('oidc.issuer'), Config::get('dezi.issuer')])),
         ]);
     }
